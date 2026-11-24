@@ -4733,13 +4733,11 @@
 "cap": "Carlinville, Ill."
 },
 {
-"k": "cut",
-"img": "cut_mast1897",
-"x": 960,
-"y": 860,
-"w": 900,
-"at": -0.6,
-"grade": "paper"
+"k": "tag",
+"text": "HONOR BILT MODERN HOMES · 1921 · p. 5",
+"x": 140,
+"y": 126,
+"at": 0
 }
 ],
 "t0": 1063.77,

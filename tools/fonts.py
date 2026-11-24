@@ -6,11 +6,8 @@ D = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 src = ''.join(open(os.path.join(D, f), encoding='utf-8').read() for f in ['index.html', 'film.json'] if os.path.exists(os.path.join(D, f)))
 chars = ''.join(sorted(set(src + ''.join(chr(c) for c in range(32, 127)) + '’‘“”–—·×…≈→☞½¼¾é°') - set('\n\r\t')))
 UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36'
-JOBS = [('fell', 'IM Fell English:ital@0'), ('fell_i', 'IM Fell English:ital@1'), ('fellsc', 'IM Fell English SC'),
-        ('ost400', 'Old Standard TT:wght@400'), ('ost700', 'Old Standard TT:wght@700'),
-        ('serif400', 'Source Serif 4:wght@400'), ('serif600', 'Source Serif 4:wght@600'), ('serifi', 'Source Serif 4:ital,wght@1,400'),
-        ('sans600', 'Source Sans 3:wght@600'), ('sans400', 'Source Sans 3:wght@400'), ('mono500', 'IBM Plex Mono:wght@500'),
-        ('hand', 'Pinyon Script')]
+JOBS = [('sans400', 'IBM Plex Sans:wght@400'), ('sans500', 'IBM Plex Sans:wght@500'), ('sans700', 'IBM Plex Sans:wght@700'),
+        ('mono400', 'IBM Plex Mono:wght@400'), ('mono600', 'IBM Plex Mono:wght@600'), ('serifi', 'Source Serif 4:ital,wght@1,400')]
 os.makedirs(os.path.join(D, 'fonts'), exist_ok=True)
 for name, fam in JOBS:
     url = 'https://fonts.googleapis.com/css2?' + urllib.parse.urlencode({'family': fam, 'text': chars, 'display': 'block'})

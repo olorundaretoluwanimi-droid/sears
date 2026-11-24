@@ -3,8 +3,8 @@
 Score (core/audio/sampler: VSCO 2 CE CC0, Salamander piano CC BY 3.0): a parlour upright with a light ragtime lilt (pizzicato bass on 1
 and 3, soft chords on 2 and 4), clarinet tune, string pad; glockenspiel for the Christmas pages; a horn for Carlinville; it thins to solo
 piano in minor for the decline and brings the opening tune back, slower, at the end. Music dips ≈ 8 dB under the voice.
-Foley from the scenes: paper for every page curl and photo laid down, pen on the order blanks, a rubber stamp for prices and dates,
-one cash-register bell (the first $14), a train and wood for the house, the plant's conveyor, a calendar page torn off."""
+Foley: the series' set — a soft shutter when a photograph cuts in, paper when a card or document lands, a low thump on each chapter
+card, a quiet room tone."""
 import json, os, sys
 import numpy as np, soundfile as sf, soxr
 D = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -61,43 +61,33 @@ for ch, a, b in spans:
         t += BAR * (1.25 if end_slow else 1); i += 1
 mus = S.render(ev, dur=DUR, master=False)[:N]; mus = S.room(mus, size=.55, mix=.22)
 if len(mus) < N: mus = np.pad(mus, ((0, N - len(mus)), (0, 0)))
-# ── foley ──
+# ── foley, the series' set (as Newton and Flint): a soft shutter when a photograph cuts in, paper when a card or document lands,
+#    a low thump on each chapter card, a quiet room tone under everything ──
 fx = np.zeros((N, 2), np.float32)
-def paper(v=1.0, d=.28): return bp(noise(d), 900, 6500) * env_exp(d, .07) * (1 - np.exp(-t_(d) / .012)) * v
-def curl(v=1.0): d = .7; x = bp(noise(d), 700, 7000) * np.sin(np.pi * t_(d) / d) ** 1.5; return norm(x) * .5 * v
-def pen(d, v=1.0):
-    x = bp(noise(d), 2500, 8000) * (0.6 + 0.4 * np.sin(2 * np.pi * 9 * t_(d)) ** 2); return norm(x) * .18 * v
-def stampfx(v=1.0): return norm(thump(.8, 110)[:int(.25 * SR)] + np.pad(paper(.6, .12), (0, int(.13 * SR)))[:int(.25 * SR)]) * v
-def wood(v=1.0): d = .12; return norm(bp(noise(d), 300, 2400) * env_exp(d, .018)) * v
-def tear(v=1.0): d = .45; x = bp(noise(d), 1500, 9000) * (np.abs(np.sin(2 * np.pi * 31 * t_(d))) ** 3) * np.linspace(1, .3, len(t_(d))); return norm(x) * .5 * v
-def train(d=4.0, v=1.0):
-    x = lp(brown(d), 300)[:int(d * SR)] * 2; tt = t_(d); cl = np.zeros_like(tt)
-    for k in np.arange(.15, d, .42): i0 = int(k * SR); seg = wood(.6); cl[i0:i0 + len(seg)] += seg[:len(cl) - i0]
-    return norm(x * np.sin(np.pi * tt / d) + cl * .5) * v
-def rattle(d, v=1.0): tt = t_(d); return norm(bp(noise(d), 400, 3000) * (.5 + .5 * np.sin(2 * np.pi * 7 * tt) ** 2)) * .25 * v
+def shutter(v=1.0):
+    d = .09; a = hp(noise(d), 2000) * env_exp(d, .006); b = np.pad(hp(noise(.05), 1500) * env_exp(.05, .005), (int(.045 * SR), 0))[:len(a)]; return norm(a + b * .8) * v
+def paper(v=1.0):
+    d = .25; return bp(noise(d), 1200, 6000) * env_exp(d, .05) * (1 - np.exp(-t_(d) / .01)) * v
 def AT(s, v): return s['t0'] + .4 if v is None else s['t0'] + (-v) * s.get('vd', s['t1'] - s['t0']) if v < 0 else s['t0'] + v
-first_cash = True
+PHOTO_SCENES = ('dots', 'bars', 'conveyor', 'tower', 'stack', 'schoper', 'flip', 'fan')
+CARD_SCENES = ('letter', 'ledger', 'calendar', 'title', 'seven', 'end')
+prev_img = None
 for s in SC:
-    if s.get('curl'): add(fx, curl(), s['t0'], .55, .1)
     ty = s['type']
-    if ty == 'blank':
-        a = s['t0'] + .5; add(fx, pen(.5), a, .5, -.2); add(fx, pen(.9), a + .55, .5, 0); add(fx, pen(.45), a + 1.55, .5, .1); add(fx, stampfx(), a + 2.15, .55, .2)
+    if ty == 'blank': add(fx, thump(.4, 60), s['t0'], .18)
+    elif ty in CARD_SCENES: add(fx, paper(.8), s['t0'] + .25, .22, .2)
+    elif ty in PHOTO_SCENES or (ty == 'house' and s.get('phase') in ('wipe', 'today')):
+        if s.get('img') != prev_img or not s.get('img'): add(fx, shutter(.6), s['t0'], .16, -.2)
     for it in s.get('items', []):
         a = AT(s, it.get('at', 0))
-        if it['k'] in ('ph', 'cut') and it.get('in') != 'none' and not (it.get('at') == 0 and s.get('curl')): add(fx, paper(.7), a, .32, -.1)
-        elif it['k'] == 'stamp':
-            add(fx, stampfx(), a, .5, .15)
-            if first_cash and it.get('text') == '$14': add(fx, ding(.7), a + .12, .35, .2); first_cash = False
-        elif it['k'] == 'hand': add(fx, pen(1.8), a + .15, .45, 0)
-        elif it['k'] == 'drop': add(fx, click(.6, .5), a + .2, .12, 0)
-    if ty == 'house' and s.get('phase') in ('parts', 'carlin'):
-        if s['phase'] == 'parts': add(fx, train(4.0), s['t0'], .35, -.3)
-        for k in range(14): add(fx, wood(), s['t0'] + 1.7 + k * min(.35, s['vd'] * .5 / 14), .22, (k % 3 - 1) * .3)
-    if ty == 'schoper': add(fx, train(3.5), s['t0'] + s['vd'] * .7, .3, .3)
-    if ty == 'conveyor': add(fx, rattle(min(s['t1'] - s['t0'], 8)), s['t0'], .35, 0)
-    if ty == 'calendar': add(fx, tear(), AT(s, s.get('flip')), .5, 0)
-    if ty in ('ledger', 'letter'): add(fx, pen(1.5), s['t0'] + .4, .35, 0)
-fx += np.repeat(lp(brown(DUR), 400)[:N, None] * .006, 2, axis=1).astype(np.float32)
+        if it['k'] == 'ph' and it['img'] != prev_img:
+            if it.get('in') == 'none' or (it.get('at') == 0 and s.get('curl')):
+                if not s.get('curl'): add(fx, shutter(.6), s['t0'], .16, -.2)
+            else: add(fx, shutter(.6), a, .16, -.2)
+        elif it['k'] in ('name', 'hand'): add(fx, paper(.8), a + .2, .22, .2)
+    imgs = [it['img'] for it in s.get('items', []) if it['k'] == 'ph']
+    prev_img = imgs[-1] if imgs else s.get('img', prev_img)
+fx += np.repeat(lp(brown(DUR), 400)[:N, None] * .008, 2, axis=1).astype(np.float32)
 # ── narration (cleaned: breaths out, long pauses shortened) ──
 voc = np.zeros((N, 2), np.float32); VO = {}
 for k, at in F['vo'].items():
@@ -107,8 +97,8 @@ for k, at in F['vo'].items():
 g = np.ones(N)
 for a, b in VO.values(): g[int(a * SR):int(b * SR)] = np.minimum(g[int(a * SR):int(b * SR)], .4)
 from scipy.ndimage import uniform_filter1d
-g = uniform_filter1d(g, int(.5 * SR)); mus *= g[:, None]; fx *= (.65 + .35 * g)[:, None]
-out = mus * 3.0 + fx * .75 + voc
+g = uniform_filter1d(g, int(.5 * SR)); mus *= g[:, None]; fx *= (.6 + .4 * g)[:, None]
+out = mus * 3.0 + fx * .7 + voc
 tail = int(3.0 * SR); out[-tail:] *= np.linspace(1, 0, tail)[:, None]
 def tp_limit(x, ceil):
     from scipy.signal import resample_poly
@@ -121,4 +111,4 @@ os.makedirs(os.path.join(D, 'out'), exist_ok=True); sf.write(os.path.join(D, 'ou
 def db(a): return 20 * np.log10(np.sqrt(np.mean(a ** 2)) + 1e-12)
 vm = np.zeros(N, bool)
 for a, b in VO.values(): vm[int(a * SR):int(b * SR)] = True
-print('mix', round(DUR, 1), 's | voice', round(db(voc[vm]), 1), 'bed under voice', round(db((mus * 3 + fx * .75)[vm]), 1), 'music alone', round(db((mus * 3)[~vm]), 1))
+print('mix', round(DUR, 1), 's | voice', round(db(voc[vm]), 1), 'bed under voice', round(db((mus * 3 + fx * .7)[vm]), 1), 'music alone', round(db((mus * 3)[~vm]), 1))

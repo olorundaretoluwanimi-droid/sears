@@ -219,8 +219,7 @@ S = {
      ph('tower_river', 1330, 110, None, 700, at=-.6, rot=-1, cap='Willis Tower · since 2009')]),
  'n94': dict(type='map', focus='Chicago', zoom=(1.0, 1.0), towns=[['Chicago', 0]], swarm=dict(src='Chicago', n=120, at=.1, dur=-.9, r=1400), warm=1),
  'n95': dict(type='spread', cam=PUSH, items=[cut('cut_watch_b', 960, 470, 520, rot=0, at=0, grade='paper'), T('drop', text='The third time, it let go.', x=960, y=880, s=70, al='center', at=.4)]),
- 'n96': dict(type='spread', cam=PULL, items=[ph('carl1921_street2', 140, 140, 1640, at=0, **{'in': 'none'}, cap='Carlinville, Ill.'),
-     cut('cut_mast1897', 960, 860, 900, at=-.6, grade='paper')]),
+ 'n96': dict(type='spread', cam=PULL, items=[ph('carl1921_street2', 140, 140, 1640, at=0, **{'in': 'none'}, cap='Carlinville, Ill.'), tag('HONOR BILT MODERN HOMES · 1921 · p. 5', 140, 126)]),
  'n97': dict(type='spread', cam=PUSH, items=[ph('hb1921_quantity', 190, 70, None, 850, at=0, rot=-1.5), ph('c1928_n460', 1130, 90, None, 830, at=.3, rot=2),
      T('hand', text='Did your family order from the catalog?', x=960, y=560, s=62, at=-.1, dur=2.2, al='center')]),
 }
