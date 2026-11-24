@@ -1,0 +1,6151 @@
+{
+"dur": 1105.8,
+"scenes": [
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.25,
+0
+],
+[
+-1.1,
+960,
+540,
+1.0,
+0
+]
+],
+"items": [
+{
+"k": "cut",
+"img": "cut_watch_a",
+"x": 760,
+"y": 470,
+"w": 360,
+"rot": -8,
+"at": 0.0
+},
+{
+"k": "cut",
+"img": "cut_watch_b",
+"x": 1180,
+"y": 520,
+"w": 330,
+"rot": 6,
+"at": 0.35
+},
+{
+"k": "drop",
+"text": "Take a look around your house.",
+"x": 960,
+"y": 860,
+"s": 64,
+"al": "center",
+"at": 0.6
+}
+],
+"t0": 0.6,
+"line": "n01",
+"vd": 2.06,
+"dk": 0,
+"ch": "open",
+"t1": 3.31
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+760,
+540,
+1.0,
+0
+],
+[
+-1.1,
+1160,
+540,
+1.0,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "craftsman_westland",
+"x": 120,
+"y": 130,
+"w": 900,
+"h": 675,
+"grade": "colour",
+"at": 0,
+"rot": -2,
+"cap": "Craftsman · 2019"
+},
+{
+"k": "tag",
+"text": "PHOTO · PHILLIP PESSAR · WESTLAND MALL, HIALEAH · 2019 (CC BY 2.0)",
+"x": 110,
+"y": 100,
+"at": 0
+},
+{
+"k": "ph",
+"img": "kenmore",
+"x": 1200,
+"y": 120,
+"w": 560,
+"h": 747,
+"grade": "colour",
+"at": -0.55,
+"rot": 2.5,
+"cap": "Kenmore"
+},
+{
+"k": "tag",
+"text": "PHOTO · STILFEHLER · 2007 (PUBLIC DOMAIN)",
+"x": 1190,
+"y": 92,
+"at": -0.55
+}
+],
+"t0": 3.31,
+"line": "n02",
+"vd": 7.08,
+"dk": 0,
+"ch": "open",
+"t1": 11.04
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+980,
+520,
+1.12,
+0
+],
+[
+-1.1,
+960,
+540,
+1.0,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "lumber_stamp",
+"x": 250,
+"y": 120,
+"w": 820,
+"h": 615,
+"grade": "colour",
+"at": 0,
+"rot": -1.5,
+"cap": "Stamped lumber in a Sears house"
+},
+{
+"k": "tag",
+"text": "PHOTO · ROSEMARY THORNTON · 2013 (PUBLIC DOMAIN)",
+"x": 240,
+"y": 92,
+"at": 0
+},
+{
+"k": "ph",
+"img": "carlin_elev",
+"x": 1000,
+"y": 470,
+"w": 760,
+"h": 449,
+"grade": "sepia",
+"at": -0.4,
+"rot": 2,
+"cap": "The Carlin · 1918"
+},
+{
+"k": "drop",
+"text": "by train, in pieces",
+"x": 1380,
+"y": 410,
+"s": 52,
+"al": "center",
+"at": -0.6
+}
+],
+"t0": 11.04,
+"line": "n03",
+"vd": 10.78,
+"dk": 0,
+"ch": "open",
+"t1": 22.47
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+470,
+1.0,
+0
+],
+[
+-1.1,
+960,
+520,
+1.06,
+0
+]
+],
+"items": [
+{
+"k": "cut",
+"img": "cut_mast1897",
+"x": 960,
+"y": 360,
+"w": 1500,
+"at": 0,
+"grade": "paper"
+},
+{
+"k": "stamp",
+"text": "CHICAGO",
+"x": 1500,
+"y": 690,
+"s": 70,
+"rot": -7,
+"at": -0.5
+}
+],
+"t0": 22.47,
+"line": "n04",
+"vd": 6.77,
+"dk": 0,
+"ch": "open",
+"t1": 29.89
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+900,
+540,
+1.0,
+0
+],
+[
+-1.1,
+1000,
+520,
+1.08,
+0.5
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "ad1888",
+"x": 260,
+"y": 160,
+"w": 760,
+"h": 661,
+"grade": "paper",
+"at": 0,
+"rot": -2
+},
+{
+"k": "tag",
+"text": "ADVERTISEMENT · WINCHESTER (IND.) JOURNAL · 5 JAN 1888",
+"x": 250,
+"y": 132,
+"at": 0
+},
+{
+"k": "cut",
+"img": "cut_watch_a",
+"x": 1400,
+"y": 470,
+"w": 420,
+"rot": 8,
+"at": -0.3
+},
+{
+"k": "stamp",
+"text": "$14",
+"x": 1450,
+"y": 800,
+"s": 110,
+"rot": -6,
+"at": -0.65
+}
+],
+"t0": 29.89,
+"line": "n05",
+"vd": 9.88,
+"dk": 0,
+"ch": "open",
+"t1": 40.42
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+700,
+540,
+1.0,
+0
+],
+[
+-1.1,
+1250,
+540,
+1.0,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "c1897_n0",
+"x": 140,
+"y": 110,
+"w": 624,
+"h": 800,
+"grade": "paper",
+"at": 0,
+"rot": -2
+},
+{
+"k": "ph",
+"img": "c1928_n460",
+"x": 760,
+"y": 130,
+"w": 572,
+"h": 780,
+"grade": "paper",
+"at": -0.3,
+"rot": 1.5
+},
+{
+"k": "ph",
+"img": "mh1918_n52",
+"x": 1330,
+"y": 110,
+"w": 561,
+"h": 800,
+"grade": "paper",
+"at": -0.65,
+"rot": -1
+},
+{
+"k": "tag",
+"text": "SEARS CATALOGS · 1897 · 1928 · 1918 (INTERNET ARCHIVE)",
+"x": 140,
+"y": 84,
+"at": 0
+}
+],
+"t0": 40.42,
+"line": "n06",
+"vd": 10.7,
+"dk": 0,
+"ch": "open",
+"t1": 51.77
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "rfd_1914a",
+"x": 410,
+"y": 70,
+"w": 1100,
+"h": 820,
+"grade": "sepia",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.06
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "PHOTO · HARRIS & EWING · RURAL FREE DELIVERY · 1914 (LIBRARY OF CONGRESS)",
+"x": 396,
+"y": 42,
+"at": 0
+}
+],
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"t0": 51.77,
+"line": "n07",
+"vd": 7.01,
+"dk": 0,
+"ch": "open",
+"t1": 59.43
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "p1906_general_v",
+"x": 517,
+"y": 90,
+"w": 887,
+"h": 820,
+"grade": "sepia",
+"at": 0,
+"rot": -1,
+"cap": "Sears, Roebuck & Co., Chicago · 1906"
+},
+{
+"k": "tag",
+"text": "STEREOGRAPH · SEARS, ROEBUCK & CO. · 1906 (SCAN: RICHARD, CC BY 2.0)",
+"x": 507,
+"y": 64,
+"at": 0
+}
+],
+"t0": 59.43,
+"line": "n08",
+"vd": 3.85,
+"dk": 0,
+"ch": "open",
+"t1": 63.92
+},
+{
+"type": "calendar",
+"a": [
+"1993",
+"the Big Book ends"
+],
+"b": [
+"1994",
+"Amazon is founded"
+],
+"flip": -0.55,
+"t0": 63.92,
+"line": "n09",
+"vd": 9.72,
+"dk": 0,
+"ch": "open",
+"t1": 74.29
+},
+{
+"type": "title",
+"t0": 74.29,
+"line": "n10",
+"vd": 11.42,
+"dk": 0,
+"ch": "open",
+"t1": 86.36
+},
+{
+"type": "seven",
+"at": [
+-0.1,
+-0.2,
+-0.3,
+-0.4,
+-0.5,
+-0.62,
+-0.78
+],
+"t0": 86.36,
+"line": "n11",
+"vd": 12.38,
+"dk": 0,
+"ch": "open",
+"t1": 99.39
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "c1928_n460",
+"x": 659,
+"y": 70,
+"w": 601,
+"h": 820,
+"grade": "paper",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "SEARS CATALOG · CHRISTMAS STOCKINGS · FALL 1928 (INTERNET ARCHIVE)",
+"x": 645,
+"y": 42,
+"at": 0
+},
+{
+"k": "ring",
+"x": 1040,
+"y": 300,
+"r": 110,
+"at": -0.55
+}
+],
+"cam": [
+[
+0,
+960,
+300,
+1.5,
+0
+],
+[
+-1.1,
+960,
+520,
+1.0,
+0
+]
+],
+"t0": 99.39,
+"line": "n12",
+"vd": 8.08,
+"dk": 0,
+"ch": "open",
+"t1": 108.12
+},
+{
+"type": "blank",
+"t0": 108.12,
+"curl": 1,
+"no": "No. 1",
+"art": "Gold Watch",
+"year": "1886",
+"price": "$14.00",
+"side": "sears_portrait",
+"sub": "a station agent, a refused shipment, and fourteen-dollar watches",
+"of": "1 OF 7",
+"dk": 0,
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+5.4,
+930,
+530,
+1.05,
+-0.5
+]
+],
+"t1": 113.52
+},
+{
+"type": "map",
+"focus": "North Redwood",
+"zoom": [
+1.0,
+3.2
+],
+"towns": [
+[
+"North Redwood",
+0.3
+],
+[
+"Minneapolis",
+0.9
+]
+],
+"routes": [],
+"note": [
+"NORTH REDWOOD, MINN.",
+"a railroad station · 1886"
+],
+"t0": 113.52,
+"line": "n13",
+"vd": 10.58,
+"dk": 0,
+"ch": "c1",
+"curl": 1,
+"t1": 124.75
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"items": [
+{
+"k": "cut",
+"img": "cut_watch_a",
+"x": 700,
+"y": 500,
+"w": 520,
+"rot": -10,
+"at": 0
+},
+{
+"k": "cut",
+"img": "cut_watch_b",
+"x": 1150,
+"y": 470,
+"w": 470,
+"rot": 7,
+"at": 0.3
+},
+{
+"k": "stamp",
+"text": "REFUSED",
+"x": 960,
+"y": 520,
+"s": 120,
+"rot": -12,
+"at": -0.7
+}
+],
+"t0": 124.75,
+"line": "n14",
+"vd": 8.23,
+"dk": 0,
+"ch": "c1",
+"t1": 133.64
+},
+{
+"type": "map",
+"focus": "North Redwood",
+"zoom": [
+3.0,
+2.0
+],
+"towns": [
+[
+"North Redwood",
+0
+]
+],
+"swarm": {
+"src": "North Redwood",
+"n": 14,
+"at": 0.15,
+"dur": -0.8,
+"r": 220
+},
+"note": [
+"$14 EACH",
+"to station agents up and down the line"
+],
+"t0": 133.64,
+"line": "n15",
+"vd": 12.84,
+"dk": 0,
+"ch": "c1",
+"t1": 147.13
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"items": [
+{
+"k": "count",
+"x": 960,
+"y": 560,
+"s": 200,
+"pre": "$",
+"to": 5000,
+"at": 0.2,
+"dur": -0.5,
+"al": "center"
+},
+{
+"k": "txt",
+"text": "in six months",
+"x": 960,
+"y": 650,
+"s": 46,
+"f": "Fell",
+"it": 1,
+"al": "center",
+"at": -0.35
+},
+{
+"k": "cut",
+"img": "cut_watch_b",
+"x": 1600,
+"y": 360,
+"w": 300,
+"rot": 12,
+"at": 0
+},
+{
+"k": "cut",
+"img": "cut_watch_a",
+"x": 330,
+"y": 700,
+"w": 300,
+"rot": -9,
+"at": 0
+}
+],
+"t0": 147.13,
+"line": "n16",
+"vd": 9.68,
+"dk": 0,
+"ch": "c1",
+"t1": 157.46
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "roebuck",
+"x": 170,
+"y": 110,
+"w": 608,
+"h": 780,
+"grade": "sepia",
+"cart": 1,
+"rot": -1.5,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "A. C. ROEBUCK · c. 1890–1910",
+"x": 160,
+"y": 84,
+"at": 0
+},
+{
+"k": "name",
+"name": "Alvah Curtis Roebuck",
+"sub": "1864–1948 · WATCH REPAIRMAN FROM INDIANA",
+"x": 888,
+"y": 470,
+"al": "l",
+"at": 0.5
+},
+{
+"k": "map",
+"x": 1180,
+"y": 660,
+"w": 600,
+"towns": [
+[
+"Chicago",
+-0.15
+],
+[
+"Minneapolis",
+0
+]
+],
+"routes": [
+[
+"Minneapolis",
+"Chicago",
+0,
+-0.3,
+0.2
+]
+]
+}
+],
+"cam": [
+[
+0,
+960,
+540,
+1.04,
+0
+],
+[
+-1.1,
+940,
+530,
+1.0,
+-0.3
+]
+],
+"at": 0,
+"t0": 157.46,
+"line": "n17",
+"vd": 13.5,
+"dk": 0,
+"ch": "c1",
+"t1": 171.61
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+520,
+1.0,
+0
+],
+[
+-0.55,
+960,
+760,
+1.7,
+0
+],
+[
+-1.1,
+960,
+800,
+1.7,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "ad1888",
+"x": 410,
+"y": 90,
+"w": 1100,
+"h": 957,
+"grade": "paper",
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "ADVERTISEMENT · WINCHESTER (IND.) JOURNAL · 5 JAN 1888",
+"x": 400,
+"y": 64,
+"at": 0
+},
+{
+"k": "hl",
+"x": 440,
+"y": 890,
+"w": 1040,
+"h": 60,
+"at": -0.45
+}
+],
+"t0": 171.61,
+"line": "n18",
+"vd": 15.28,
+"dk": 0,
+"ch": "c1",
+"t1": 187.54
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"items": [
+{
+"k": "drop",
+"text": "SEARS, ROEBUCK & CO.",
+"x": 960,
+"y": 470,
+"s": 120,
+"f": "FellSC",
+"al": "center",
+"at": 0.2,
+"ls": 4
+},
+{
+"k": "stamp",
+"text": "1893",
+"x": 960,
+"y": 640,
+"s": 96,
+"rot": -4,
+"at": -0.5
+}
+],
+"t0": 187.54,
+"line": "n19",
+"vd": 8.14,
+"dk": 0,
+"ch": "c1",
+"t1": 196.33
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "sears_portrait",
+"x": 170,
+"y": 110,
+"w": 590,
+"h": 780,
+"grade": "sepia",
+"cart": 1,
+"rot": -1.5,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "R. W. SEARS · c. 1890–1910",
+"x": 160,
+"y": 84,
+"at": 0
+},
+{
+"k": "name",
+"name": "Richard Warren Sears",
+"sub": "1863–1914 · FOUNDER",
+"x": 870,
+"y": 470,
+"al": "l",
+"at": 0.5
+},
+{
+"k": "cut",
+"img": "cut_watches_head",
+"x": 1350,
+"y": 760,
+"w": 760,
+"at": -0.5,
+"grade": "paper"
+}
+],
+"cam": [
+[
+0,
+960,
+540,
+1.04,
+0
+],
+[
+-1.1,
+940,
+530,
+1.0,
+-0.3
+]
+],
+"at": 0,
+"t0": 196.33,
+"line": "n20",
+"vd": 12.9,
+"dk": 0,
+"ch": "c1",
+"t1": 209.88
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "rosenwald1919",
+"x": 170,
+"y": 110,
+"w": 643,
+"h": 780,
+"grade": "sepia",
+"cart": 1,
+"rot": -1.5,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "J. ROSENWALD · NATIONAL PHOTO CO. · 1919 (LIBRARY OF CONGRESS)",
+"x": 160,
+"y": 84,
+"at": 0
+},
+{
+"k": "name",
+"name": "Julius Rosenwald",
+"sub": "1862–1932 · PARTNER FROM 1895 · PRESIDENT 1908–1924",
+"x": 923,
+"y": 470,
+"al": "l",
+"at": 0.5
+}
+],
+"cam": [
+[
+0,
+960,
+540,
+1.04,
+0
+],
+[
+-1.1,
+940,
+530,
+1.0,
+-0.3
+]
+],
+"at": 0,
+"t0": 209.88,
+"line": "n21",
+"vd": 13.91,
+"dk": 0,
+"ch": "c1",
+"t1": 224.44
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "trio1895",
+"x": 435,
+"y": 70,
+"w": 1050,
+"h": 820,
+"grade": "sepia",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "SEARS · NUSBAUM · ROSENWALD · 1895 (LIBRARY OF CONGRESS)",
+"x": 421,
+"y": 42,
+"at": 0
+}
+],
+"cam": [
+[
+0,
+960,
+520,
+1.0,
+0
+],
+[
+-1.1,
+960,
+470,
+1.15,
+0
+]
+],
+"t0": 224.44,
+"line": "n22",
+"vd": 9.48,
+"dk": 0,
+"ch": "c1",
+"t1": 234.56
+},
+{
+"type": "bars",
+"title": "SEARS, ROEBUCK & CO. · ANNUAL SALES",
+"data": [
+[
+"1895",
+0.75,
+"$750,000"
+],
+[
+"1907",
+50,
+"$50 million +"
+]
+],
+"max": 55,
+"at": [
+-0.15,
+-0.55
+],
+"img": "p1906_merch",
+"t0": 234.56,
+"line": "n23",
+"vd": 11.13,
+"dk": 0,
+"ch": "c1",
+"t1": 246.34
+},
+{
+"type": "map",
+"focus": "Chicago",
+"zoom": [
+1.0,
+1.0
+],
+"towns": [
+[
+"Chicago",
+0
+]
+],
+"swarm": {
+"src": "Chicago",
+"n": 60,
+"at": 0.1,
+"dur": -0.9,
+"r": 900
+},
+"note": [
+"WHAT ELSE?",
+""
+],
+"t0": 246.34,
+"line": "n24",
+"vd": 6.57,
+"dk": 0,
+"ch": "c1",
+"t1": 253.56
+},
+{
+"type": "blank",
+"t0": 253.56,
+"curl": 1,
+"no": "No. 104",
+"art": "Consumers Guide",
+"year": "1897",
+"price": "15¢",
+"side": "c1897_n0",
+"sideGrade": "paper",
+"sub": "the book that brought the city store to every farm",
+"of": "2 OF 7",
+"dk": 0,
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+5.4,
+930,
+530,
+1.05,
+-0.5
+]
+],
+"t1": 258.96
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "c1897_n0",
+"x": 640,
+"y": 70,
+"w": 640,
+"h": 820,
+"grade": "paper",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "CONSUMERS GUIDE · CATALOGUE NO. 104 · SPRING 1897 (INTERNET ARCHIVE)",
+"x": 626,
+"y": 42,
+"at": 0
+}
+],
+"cam": [
+[
+0,
+960,
+300,
+1.35,
+0
+],
+[
+-1.1,
+960,
+520,
+1.0,
+0
+]
+],
+"t0": 258.96,
+"line": "n25",
+"vd": 8.28,
+"dk": 0,
+"ch": "c2",
+"curl": 1,
+"t1": 267.89
+},
+{
+"type": "stack",
+"img": "c1897_n2",
+"keys": [
+[
+0.1,
+32,
+"1888"
+],
+[
+-0.45,
+322,
+"1894"
+],
+[
+-0.8,
+532,
+"1895"
+]
+],
+"t0": 267.89,
+"line": "n26",
+"vd": 13.85,
+"dk": 0,
+"ch": "c2",
+"t1": 282.39
+},
+{
+"type": "flip",
+"pages": [
+"c1897_n171",
+"c1897_n372",
+"c1897_n29",
+"c1928_n993",
+"c1897_n55",
+"c1928_n460"
+],
+"words": [
+"Groceries.",
+"Stoves.",
+"Dolls.",
+"Medicines.",
+"Bicycles.",
+"Clothing.",
+"Plows."
+],
+"t0": 282.39,
+"line": "n27",
+"vd": 8.2,
+"dk": 0,
+"ch": "c2",
+"t1": 291.25
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "rfd_wagon",
+"x": 418,
+"y": 70,
+"w": 1083,
+"h": 820,
+"grade": "sepia",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "PHOTO · RURAL FREE DELIVERY CARRIER (SMITHSONIAN NATIONAL POSTAL MUSEUM)",
+"x": 404,
+"y": 42,
+"at": 0
+},
+{
+"k": "stamp",
+"text": "R.F.D. 1896",
+"x": 1580,
+"y": 200,
+"s": 64,
+"rot": -8,
+"at": -0.4
+}
+],
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"t0": 291.25,
+"line": "n28",
+"vd": 15.2,
+"dk": 0,
+"ch": "c2",
+"t1": 307.1
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+760,
+540,
+1.0,
+0
+],
+[
+-1.1,
+1180,
+540,
+1.0,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "parcel1913",
+"x": 130,
+"y": 110,
+"w": 644,
+"h": 800,
+"grade": "sepia",
+"at": 0,
+"rot": -1.5,
+"cap": "Opening up Parcel Post · 1913"
+},
+{
+"k": "tag",
+"text": "PHOTO · NATIONAL PHOTO CO. · 1913 (LIBRARY OF CONGRESS)",
+"x": 120,
+"y": 84,
+"at": 0
+},
+{
+"k": "ph",
+"img": "rfd_auto",
+"x": 860,
+"y": 300,
+"w": 960,
+"h": 585,
+"grade": "sepia",
+"at": -0.45,
+"rot": 2,
+"cap": "A rural carrier · c. 1910"
+},
+{
+"k": "tag",
+"text": "SMITHSONIAN NATIONAL POSTAL MUSEUM",
+"x": 850,
+"y": 272,
+"at": -0.45
+}
+],
+"t0": 307.1,
+"line": "n29",
+"vd": 7.0,
+"dk": 0,
+"ch": "c2",
+"t1": 314.75
+},
+{
+"type": "map",
+"focus": "Chicago",
+"zoom": [
+1.0,
+1.0
+],
+"towns": [
+[
+"Chicago",
+0
+]
+],
+"swarm": {
+"src": "Chicago",
+"n": 160,
+"at": 0.1,
+"dur": -0.85,
+"r": 1400
+},
+"count": {
+"text": "1 in 5",
+"label": "Americans got the catalog by 1908",
+"at": 0.4
+},
+"count2": {
+"text": "100,000 items · 1,400 pages",
+"at": -0.6
+},
+"t0": 314.75,
+"line": "n30",
+"vd": 12.57,
+"dk": 0,
+"ch": "c2",
+"t1": 327.97
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+900,
+560,
+1.12,
+0
+],
+[
+-1.1,
+960,
+520,
+1.0,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "p1906_merch_v",
+"x": 520,
+"y": 80,
+"w": 865,
+"h": 820,
+"grade": "sepia",
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "STEREOGRAPH · MERCHANDISE BUILDING · 1906 (CC BY 2.0)",
+"x": 510,
+"y": 54,
+"at": 0
+},
+{
+"k": "note",
+"text": "world’s largest",
+"x": 1480,
+"y": 480,
+"s": 44,
+"at": -0.6
+},
+{
+"k": "txt",
+"text": "commercial building",
+"x": 1480,
+"y": 540,
+"s": 44,
+"f": "Fell",
+"it": 1,
+"at": -0.6
+}
+],
+"t0": 327.97,
+"line": "n31",
+"vd": 13.08,
+"dk": 0,
+"ch": "c2",
+"t1": 341.7
+},
+{
+"type": "conveyor",
+"img": "habs_conveyors",
+"img2": "p1906_trainshed_v",
+"tag": "HABS · SHIPPING COURT CONVEYORS (LIBRARY OF CONGRESS)",
+"tag2": "STEREOGRAPH · TRAIN SHED · 1906 (CC BY 2.0)",
+"t0": 341.7,
+"line": "n32",
+"vd": 9.79,
+"dk": 0,
+"ch": "c2",
+"t1": 352.14
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-0.7,
+1040,
+700,
+1.55,
+0
+],
+[
+-1.1,
+1040,
+700,
+1.55,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "c1897_n29",
+"x": 520,
+"y": 70,
+"w": 658,
+"h": 840,
+"grade": "paper",
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "SEARS CATALOGUE · SPRING 1897 · p. 28",
+"x": 510,
+"y": 44,
+"at": 0
+},
+{
+"k": "ring",
+"x": 1047,
+"y": 742,
+"r": 125,
+"at": -0.5
+}
+],
+"t0": 352.14,
+"line": "n33",
+"vd": 9.77,
+"dk": 0,
+"ch": "c2",
+"t1": 362.56
+},
+{
+"type": "letter",
+"img": "letters1897",
+"who": "A. J. Barwick",
+"place": "Chapel Hill, N.C.",
+"date": "Jan. 13, 1897",
+"head": "Much Pleased with Watch.",
+"q": [
+"I am much pleased. So far",
+"it is all you claim for it.",
+"It keeps splendid time."
+],
+"hl": [
+0.08,
+0.16,
+0.5
+],
+"t0": 362.56,
+"line": "q01",
+"vd": 7.27,
+"dk": 0,
+"ch": "c2",
+"t1": 370.48
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+960,
+520,
+1.04,
+0
+]
+],
+"items": [
+{
+"k": "cut",
+"img": "cut_dare1897",
+"x": 960,
+"y": 360,
+"w": 1760,
+"at": 0,
+"grade": "paper"
+},
+{
+"k": "hl",
+"x": 80,
+"y": 330,
+"w": 1760,
+"h": 60,
+"at": 0.3,
+"dur": -0.6
+},
+{
+"k": "drop",
+"text": "“Give us one trial.”",
+"x": 960,
+"y": 640,
+"s": 96,
+"al": "center",
+"at": -0.6
+}
+],
+"t0": 370.48,
+"line": "n34",
+"vd": 8.3,
+"dk": 0,
+"ch": "c2",
+"t1": 379.43
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "c1928_n460",
+"x": 660,
+"y": 70,
+"w": 600,
+"h": 819,
+"grade": "paper",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "SEARS CATALOG · FALL 1928 · p. 459 (INTERNET ARCHIVE)",
+"x": 646,
+"y": 42,
+"at": 0
+},
+{
+"k": "ph",
+"img": "c1912_n0",
+"x": 1380,
+"y": 140,
+"w": 504,
+"h": 700,
+"grade": "paper",
+"at": -0.4,
+"rot": 4
+},
+{
+"k": "ph",
+"img": "c1928_n0",
+"x": 150,
+"y": 160,
+"w": 511,
+"h": 680,
+"grade": "paper",
+"at": -0.2,
+"rot": -4
+}
+],
+"cam": [
+[
+0,
+960,
+640,
+1.6,
+0
+],
+[
+-1.1,
+960,
+470,
+1.25,
+0
+]
+],
+"t0": 379.43,
+"line": "n35",
+"vd": 9.86,
+"dk": 0,
+"ch": "c2",
+"t1": 389.94
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "c1928_n0",
+"x": 210,
+"y": 110,
+"w": 593,
+"h": 790,
+"grade": "paper",
+"at": 0,
+"rot": -2,
+"cap": "Fall & Winter 1928–29"
+},
+{
+"k": "tag",
+"text": "SEARS CATALOG COVER · 1928 (INTERNET ARCHIVE)",
+"x": 200,
+"y": 84,
+"at": 0
+},
+{
+"k": "drop",
+"text": "1933",
+"x": 1350,
+"y": 380,
+"s": 150,
+"f": "OST",
+"w": 700,
+"c": "red",
+"al": "center",
+"at": 0.4
+},
+{
+"k": "txt",
+"text": "the Christmas Book",
+"x": 1350,
+"y": 450,
+"s": 44,
+"f": "Fell",
+"it": 1,
+"al": "center",
+"at": -0.25
+},
+{
+"k": "drop",
+"text": "The Wish Book",
+"x": 1350,
+"y": 640,
+"s": 96,
+"al": "center",
+"at": -0.75
+},
+{
+"k": "stamp",
+"text": "1968",
+"x": 1350,
+"y": 760,
+"s": 72,
+"rot": -6,
+"at": -0.85
+}
+],
+"t0": 389.94,
+"line": "n36",
+"vd": 13.11,
+"dk": 0,
+"ch": "c2",
+"t1": 403.7
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "c1928_n460",
+"x": 660,
+"y": 70,
+"w": 600,
+"h": 819,
+"grade": "paper",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "SEARS CATALOG · CHRISTMAS · FALL 1928 (INTERNET ARCHIVE)",
+"x": 646,
+"y": 42,
+"at": 0
+},
+{
+"k": "ring",
+"x": 790,
+"y": 420,
+"r": 90,
+"at": -0.55,
+"pen": 1
+},
+{
+"k": "ring",
+"x": 1150,
+"y": 330,
+"r": 80,
+"at": -0.8,
+"pen": 1
+}
+],
+"cam": [
+[
+0,
+960,
+340,
+1.45,
+0
+],
+[
+-1.1,
+960,
+560,
+1.3,
+0
+]
+],
+"t0": 403.7,
+"line": "n37",
+"vd": 9.88,
+"dk": 0,
+"ch": "c2",
+"t1": 414.23
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+530,
+1.1,
+-0.3
+],
+[
+-1.1,
+960,
+540,
+1.0,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "mh1918_n0",
+"x": 650,
+"y": 90,
+"w": 575,
+"h": 820,
+"grade": "paper",
+"at": 0,
+"rot": -1.5
+},
+{
+"k": "tag",
+"text": "HONOR BILT MODERN HOMES · 1918 (INTERNET ARCHIVE)",
+"x": 640,
+"y": 64,
+"at": 0
+}
+],
+"t0": 414.23,
+"line": "n38",
+"vd": 7.21,
+"dk": 0,
+"ch": "c2",
+"t1": 422.09
+},
+{
+"type": "blank",
+"t0": 422.09,
+"curl": 1,
+"no": "No. 3031",
+"art": "The Carlin",
+"year": "1918",
+"price": "$1,172",
+"side": "carlin_elev",
+"sub": "a house, by mail, by rail, in pieces",
+"of": "3 OF 7",
+"dk": 0,
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+5.4,
+930,
+530,
+1.05,
+-0.5
+]
+],
+"t1": 427.49
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "mh1911_n0",
+"x": 384,
+"y": 70,
+"w": 1152,
+"h": 820,
+"grade": "paper",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.08
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "MODERN HOMES · SEARS, ROEBUCK & CO. · 1911 (INTERNET ARCHIVE)",
+"x": 370,
+"y": 42,
+"at": 0
+}
+],
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"t0": 427.49,
+"line": "n39",
+"vd": 6.94,
+"dk": 0,
+"ch": "c3",
+"curl": 1,
+"t1": 435.08
+},
+{
+"type": "house",
+"phase": "parts",
+"t0": 435.08,
+"line": "n40",
+"vd": 17.33,
+"dk": 0,
+"ch": "c3",
+"t1": 453.06
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"items": [
+{
+"k": "cal90",
+"x": 960,
+"y": 480,
+"at": 0.1,
+"dur": -0.8
+},
+{
+"k": "txt",
+"text": "“a man of average abilities”",
+"x": 960,
+"y": 860,
+"s": 44,
+"f": "Fell",
+"it": 1,
+"al": "center",
+"at": 0.4
+}
+],
+"t0": 453.06,
+"line": "n41",
+"vd": 7.72,
+"dk": 0,
+"ch": "c3",
+"t1": 461.43
+},
+{
+"type": "dots",
+"light": 1,
+"per": 50,
+"img": "mh1918_n12",
+"label": "Sears houses, 1908–1940",
+"keys": [
+[
+0,
+0
+],
+[
+-0.6,
+75000
+]
+],
+"note": "≈ 70,000–75,000",
+"t0": 461.43,
+"line": "n42",
+"vd": 13.14,
+"dk": 0,
+"ch": "c3",
+"from": 75000,
+"t1": 475.22
+},
+{
+"type": "map",
+"focus": "Carlinville",
+"zoom": [
+1.0,
+2.6
+],
+"towns": [
+[
+"Chicago",
+0
+],
+[
+"Carlinville",
+0.4
+]
+],
+"routes": [
+[
+"Chicago",
+"Carlinville",
+0.2,
+-0.8,
+-0.25
+]
+],
+"t0": 475.22,
+"line": "n43",
+"vd": 3.68,
+"dk": 0,
+"ch": "c3",
+"t1": 479.55
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+1100,
+520,
+1.12,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "carl_ed1940",
+"x": 140,
+"y": 80,
+"w": 649,
+"h": 840,
+"grade": "paper",
+"at": 0,
+"rot": -1.5,
+"cap": "Carlinville · 1940"
+},
+{
+"k": "tag",
+"text": "1940 CENSUS DISTRICT MAP (NATIONAL ARCHIVES)",
+"x": 130,
+"y": 54,
+"at": 0
+},
+{
+"k": "ph",
+"img": "carl_courthouse",
+"x": 1130,
+"y": 140,
+"w": 506,
+"h": 740,
+"grade": "colour",
+"at": -0.35,
+"rot": 2,
+"cap": "Macoupin County Courthouse"
+},
+{
+"k": "tag",
+"text": "PHOTO · JOHN MARGOLIES · 1991 (LIBRARY OF CONGRESS)",
+"x": 1120,
+"y": 112,
+"at": -0.35
+}
+],
+"t0": 479.55,
+"line": "n44",
+"vd": 7.07,
+"dk": 0,
+"ch": "c3",
+"t1": 487.27
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "carl1921_street3",
+"x": 180,
+"y": 213,
+"w": 1560,
+"h": 523,
+"grade": "sepia",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "HONOR BILT MODERN HOMES · 1921 · p. 4 (INTERNET ARCHIVE)",
+"x": 166,
+"y": 185,
+"at": 0
+},
+{
+"k": "stamp",
+"text": "STANDARD OIL · 1918",
+"x": 1460,
+"y": 180,
+"s": 58,
+"rot": -6,
+"at": -0.55
+}
+],
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"t0": 487.27,
+"line": "n45",
+"vd": 12.77,
+"dk": 0,
+"ch": "c3",
+"t1": 500.69
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "hb1921_quantity",
+"x": 160,
+"y": 70,
+"w": 601,
+"h": 850,
+"grade": "paper",
+"at": 0,
+"rot": -1
+},
+{
+"k": "tag",
+"text": "HONOR BILT MODERN HOMES · 1921 · p. 5",
+"x": 150,
+"y": 44,
+"at": 0
+},
+{
+"k": "hl",
+"x": 176,
+"y": 262,
+"w": 470,
+"h": 50,
+"at": 0.3
+},
+{
+"k": "count",
+"x": 1350,
+"y": 520,
+"s": 220,
+"to": 192,
+"at": 0.2,
+"dur": -0.4,
+"al": "center"
+},
+{
+"k": "txt",
+"text": "houses · about $1,000,000",
+"x": 1350,
+"y": 610,
+"s": 46,
+"f": "Fell",
+"it": 1,
+"al": "center",
+"at": -0.45
+}
+],
+"t0": 500.69,
+"line": "n46",
+"vd": 8.96,
+"dk": 0,
+"ch": "c3",
+"t1": 510.3
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.25,
+0
+],
+[
+-1.1,
+960,
+520,
+1.0,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "carl1921_birdseye",
+"x": 90,
+"y": 200,
+"w": 1740,
+"h": 452,
+"grade": "sepia",
+"at": 0,
+"in": "none",
+"cap": "Birdseye view of Sears houses at Carlinville, Ill."
+},
+{
+"k": "tag",
+"text": "HONOR BILT MODERN HOMES · 1921 · p. 4",
+"x": 80,
+"y": 172,
+"at": 0
+},
+{
+"k": "drop",
+"text": "The Standard Addition",
+"x": 960,
+"y": 860,
+"s": 72,
+"al": "center",
+"at": -0.55
+}
+],
+"t0": 510.3,
+"line": "n47",
+"vd": 9.13,
+"dk": 0,
+"ch": "c3",
+"t1": 520.08
+},
+{
+"type": "house",
+"phase": "carlin",
+"t0": 520.08,
+"line": "n48",
+"vd": 12.74,
+"dk": 0,
+"ch": "c3",
+"t1": 533.47
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+300,
+1.55,
+0
+],
+[
+-1.1,
+960,
+520,
+1.0,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "hb1921_sell",
+"x": 330,
+"y": 60,
+"w": 608,
+"h": 860,
+"grade": "paper",
+"at": 0,
+"in": "none"
+},
+{
+"k": "ph",
+"img": "hb1921_quantity",
+"x": 970,
+"y": 60,
+"w": 608,
+"h": 860,
+"grade": "paper",
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "HONOR BILT MODERN HOMES · 1921 · pp. 4–5 (INTERNET ARCHIVE)",
+"x": 320,
+"y": 36,
+"at": 0
+}
+],
+"t0": 533.47,
+"line": "n49",
+"vd": 11.94,
+"dk": 0,
+"ch": "c3",
+"t1": 546.06
+},
+{
+"type": "house",
+"phase": "wipe",
+"t0": 546.06,
+"line": "n50",
+"vd": 7.24,
+"dk": 0,
+"ch": "c3",
+"t1": 553.95
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "schopper1921",
+"x": 180,
+"y": 260,
+"w": 1560,
+"h": 429,
+"grade": "sepia",
+"cap": "Schopper, Ill. · sold to the Standard Oil Company",
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "HONOR BILT MODERN HOMES · 1921 · p. 5",
+"x": 166,
+"y": 232,
+"at": 0
+},
+{
+"k": "stamp",
+"text": "CLOSED · 1925",
+"x": 1420,
+"y": 210,
+"s": 70,
+"rot": -7,
+"at": -0.5
+}
+],
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"t0": 553.95,
+"line": "n51",
+"vd": 8.67,
+"dk": 0,
+"ch": "c3",
+"t1": 563.27
+},
+{
+"type": "schoper",
+"t0": 563.27,
+"line": "n52",
+"vd": 15.65,
+"dk": 0,
+"ch": "c3",
+"t1": 579.57
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+1100,
+520,
+1.1,
+0
+],
+[
+-1.1,
+900,
+540,
+1.0,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "carl1921_street1",
+"x": 120,
+"y": 150,
+"w": 1680,
+"h": 551,
+"grade": "sepia",
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "HONOR BILT MODERN HOMES · 1921 · p. 5",
+"x": 110,
+"y": 122,
+"at": 0
+},
+{
+"k": "count",
+"x": 960,
+"y": 860,
+"s": 130,
+"pre": "≈ ",
+"to": 150,
+"at": 0.3,
+"dur": -0.4,
+"al": "center",
+"note": "still standing"
+}
+],
+"t0": 579.57,
+"line": "n53",
+"vd": 12.47,
+"dk": 0,
+"ch": "c3",
+"t1": 592.69
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "lumber_stamp",
+"x": 413,
+"y": 70,
+"w": 1093,
+"h": 820,
+"grade": "colour",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "PHOTO · ROSEMARY THORNTON · STAMPED LUMBER IN A SEARS HOUSE · 2013 (PUBLIC DOMAIN)",
+"x": 399,
+"y": 42,
+"at": 0
+},
+{
+"k": "ring",
+"x": 700,
+"y": 360,
+"r": 120,
+"at": -0.75
+}
+],
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+1020,
+470,
+1.25,
+0
+]
+],
+"t0": 592.69,
+"line": "n54",
+"vd": 14.99,
+"dk": 0,
+"ch": "c3",
+"t1": 608.33
+},
+{
+"type": "ledger",
+"rows": [
+[
+"c.1912",
+"Sears lends buyers the money",
+""
+],
+[
+"1929–33",
+"the Depression: loans go bad",
+"$11,000,000"
+],
+[
+"1933",
+"Sears stops lending",
+""
+]
+],
+"t0": 608.33,
+"line": "n55",
+"vd": 20.93,
+"dk": 0,
+"ch": "c3",
+"t1": 629.91
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "mh1918_cover",
+"x": 680,
+"y": 89,
+"w": 560,
+"h": 771,
+"grade": "paper",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "HONOR BILT MODERN HOMES · 1918",
+"x": 666,
+"y": 61,
+"at": 0
+},
+{
+"k": "stamp",
+"text": "1908–1940",
+"x": 1450,
+"y": 520,
+"s": 80,
+"rot": -5,
+"at": 0.5
+}
+],
+"cam": [
+[
+0,
+960,
+530,
+1.1,
+-0.3
+],
+[
+-1.1,
+960,
+540,
+1.0,
+0
+]
+],
+"t0": 629.91,
+"line": "n56",
+"vd": 11.08,
+"dk": 0,
+"ch": "c3",
+"t1": 641.64
+},
+{
+"type": "blank",
+"t0": 641.64,
+"curl": 1,
+"no": "—",
+"art": "Sears Store",
+"year": "1925",
+"price": "2 FEB",
+"side": "store1929_allentown",
+"sub": "a store at the end of the road",
+"of": "4 OF 7",
+"dk": 0,
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+5.4,
+930,
+530,
+1.05,
+-0.5
+]
+],
+"t1": 647.04
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "truck1909",
+"x": 516,
+"y": 70,
+"w": 888,
+"h": 820,
+"grade": "sepia",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "SEARS, ROEBUCK ELECTRIC TRUCK · c. 1908 (PUBLIC DOMAIN)",
+"x": 502,
+"y": 42,
+"at": 0
+}
+],
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"t0": 647.04,
+"line": "n57",
+"vd": 7.18,
+"dk": 0,
+"ch": "c4",
+"curl": 1,
+"t1": 654.87
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"items": [
+{
+"k": "drop",
+"text": "“The future is stores.”",
+"x": 960,
+"y": 440,
+"s": 96,
+"al": "center",
+"at": 0.4
+},
+{
+"k": "txt",
+"text": "Robert E. Wood · joined Sears 1924",
+"x": 960,
+"y": 540,
+"s": 38,
+"f": "Mono",
+"al": "center",
+"at": -0.4
+}
+],
+"t0": 654.87,
+"line": "n58",
+"vd": 7.38,
+"dk": 0,
+"ch": "c4",
+"t1": 662.9
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+960,
+520,
+1.08,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "p1906_noon_v",
+"x": 200,
+"y": 110,
+"w": 835,
+"h": 800,
+"grade": "sepia",
+"at": 0,
+"in": "none",
+"cap": "The West Side plant"
+},
+{
+"k": "tag",
+"text": "STEREOGRAPH · ON THE STREET AT NOON · 1906 (CC BY 2.0)",
+"x": 190,
+"y": 84,
+"at": 0
+},
+{
+"k": "stamp",
+"text": "2 FEB 1925",
+"x": 1580,
+"y": 420,
+"s": 66,
+"rot": -6,
+"at": -0.4
+},
+{
+"k": "txt",
+"text": "the first store",
+"x": 1580,
+"y": 510,
+"s": 40,
+"f": "Fell",
+"it": 1,
+"al": "center",
+"at": -0.5
+}
+],
+"t0": 662.9,
+"line": "n59",
+"vd": 9.0,
+"dk": 0,
+"ch": "c4",
+"t1": 672.55
+},
+{
+"type": "dots",
+"light": 1,
+"per": 1,
+"img": "store1929_allentown",
+"label": "Sears stores",
+"keys": [
+[
+0,
+1
+],
+[
+-0.4,
+27
+],
+[
+-0.85,
+324
+]
+],
+"years": [
+[
+0,
+"1925"
+],
+[
+-0.4,
+"1927"
+],
+[
+-0.85,
+"1932"
+]
+],
+"t0": 672.55,
+"line": "n60",
+"vd": 8.35,
+"dk": 0,
+"ch": "c4",
+"from": 324,
+"t1": 681.56
+},
+{
+"type": "bars",
+"title": "SEARS SALES · 1931",
+"data": [
+[
+"Stores",
+53.4,
+"53%"
+],
+[
+"Catalog",
+46.6,
+"47%"
+]
+],
+"max": 60,
+"at": [
+-0.25,
+-0.45
+],
+"img": "store1926_seattle",
+"t0": 681.56,
+"line": "n61",
+"vd": 6.66,
+"dk": 0,
+"ch": "c4",
+"t1": 688.86
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "store1929_allentown",
+"x": 408,
+"y": 70,
+"w": 1104,
+"h": 820,
+"grade": "sepia",
+"cap": "Allentown, Pa. · 1929",
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.08
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "SEARS, ROEBUCK BUILDING · ALLENTOWN, PA. · 1929 (PUBLIC DOMAIN)",
+"x": 394,
+"y": 42,
+"at": 0
+}
+],
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"t0": 688.86,
+"line": "n62",
+"vd": 6.09,
+"dk": 0,
+"ch": "c4",
+"t1": 695.61
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "store1926_seattle",
+"x": 457,
+"y": 70,
+"w": 1005,
+"h": 820,
+"grade": "sepia",
+"cap": "Seattle · c. 1926",
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "SEARS, ROEBUCK WESTERN BRANCH · SEATTLE · c. 1926 (MOHAI)",
+"x": 443,
+"y": 42,
+"at": 0
+}
+],
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"t0": 695.61,
+"line": "n63",
+"vd": 9.06,
+"dk": 0,
+"ch": "c4",
+"t1": 705.32
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+760,
+540,
+1.0,
+0
+],
+[
+-1.1,
+1200,
+520,
+1.0,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "c1928_n995",
+"x": 160,
+"y": 90,
+"w": 594,
+"h": 820,
+"grade": "paper",
+"at": 0,
+"rot": -1.5,
+"cap": "Craftsman · 1928"
+},
+{
+"k": "tag",
+"text": "SEARS CATALOG · FALL 1928 · p. 994",
+"x": 150,
+"y": 64,
+"at": 0
+},
+{
+"k": "ph",
+"img": "kenmore",
+"x": 1260,
+"y": 140,
+"w": 540,
+"h": 720,
+"grade": "colour",
+"at": -0.35,
+"rot": 2,
+"cap": "Kenmore"
+},
+{
+"k": "tag",
+"text": "PHOTO · STILFEHLER · 2007 (PUBLIC DOMAIN)",
+"x": 1250,
+"y": 112,
+"at": -0.35
+},
+{
+"k": "stamp",
+"text": "1927",
+"x": 960,
+"y": 480,
+"s": 96,
+"rot": -5,
+"at": -0.55
+}
+],
+"t0": 705.32,
+"line": "n64",
+"vd": 15.35,
+"dk": 0,
+"ch": "c4",
+"t1": 721.32
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "craftsman_westland",
+"x": 413,
+"y": 70,
+"w": 1093,
+"h": 820,
+"grade": "colour",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.1
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "PHOTO · PHILLIP PESSAR · 2019 (CC BY 2.0)",
+"x": 399,
+"y": 42,
+"at": 0
+}
+],
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"t0": 721.32,
+"line": "n65",
+"vd": 2.98,
+"dk": 0,
+"ch": "c4",
+"t1": 724.95
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+530,
+1.1,
+-0.3
+],
+[
+-1.1,
+960,
+540,
+1.0,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "p1906_yards_v",
+"x": 517,
+"y": 100,
+"w": 834,
+"h": 800,
+"grade": "sepia",
+"at": 0,
+"in": "none",
+"cap": "Railroad yards · 1906"
+},
+{
+"k": "tag",
+"text": "STEREOGRAPH · SEARS, ROEBUCK & CO. · 1906 (CC BY 2.0)",
+"x": 507,
+"y": 74,
+"at": 0
+}
+],
+"t0": 724.95,
+"line": "n66",
+"vd": 3.11,
+"dk": 0,
+"ch": "c4",
+"t1": 728.72
+},
+{
+"type": "blank",
+"t0": 728.72,
+"curl": 1,
+"no": "—",
+"art": "Sears Tower",
+"year": "1973",
+"price": "1,451 FT",
+"side": "tower1974",
+"sideGrade": "colour",
+"sub": "the tallest building in the world",
+"of": "5 OF 7",
+"dk": 0.35,
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+5.4,
+930,
+530,
+1.05,
+-0.5
+]
+],
+"t1": 734.12
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "tower_river",
+"x": 600,
+"y": 70,
+"w": 720,
+"h": 816,
+"grade": "colour",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "PHOTO · W. LEMAY · SEARS TOWER FROM THE CHICAGO RIVER · 2015 (CC0)",
+"x": 586,
+"y": 42,
+"at": 0
+}
+],
+"cam": [
+[
+0,
+960,
+760,
+1.3,
+0
+],
+[
+-1.1,
+960,
+380,
+1.3,
+0
+]
+],
+"t0": 734.12,
+"line": "n67",
+"vd": 10.69,
+"dk": 0.35,
+"ch": "c5",
+"curl": 1,
+"t1": 745.45
+},
+{
+"type": "tower",
+"t0": 745.45,
+"line": "n68",
+"vd": 15.55,
+"dk": 0.35,
+"ch": "c5",
+"t1": 761.65
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+760,
+540,
+1.0,
+0
+],
+[
+-1.1,
+1180,
+540,
+1.0,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "habs_tower",
+"x": 170,
+"y": 90,
+"w": 662,
+"h": 820,
+"grade": "sepia",
+"at": 0,
+"rot": -1.5,
+"cap": "The West Side plant tower"
+},
+{
+"k": "tag",
+"text": "HABS · MERCHANDISE BUILDING TOWER (LIBRARY OF CONGRESS)",
+"x": 160,
+"y": 64,
+"at": 0
+},
+{
+"k": "ph",
+"img": "tower1974",
+"x": 1170,
+"y": 90,
+"w": 495,
+"h": 820,
+"grade": "colour",
+"at": -0.4,
+"rot": 2,
+"cap": "Sears Tower · 1974"
+},
+{
+"k": "tag",
+"text": "DOCUMERICA · U.S. EPA · 1974 (NATIONAL ARCHIVES)",
+"x": 1160,
+"y": 64,
+"at": -0.4
+}
+],
+"t0": 761.65,
+"line": "n69",
+"vd": 7.09,
+"dk": 0.35,
+"ch": "c5",
+"t1": 769.39
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "tower1974",
+"x": 712,
+"y": 70,
+"w": 495,
+"h": 820,
+"grade": "colour",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "DOCUMERICA · U.S. EPA · CHICAGO · 1974 (NATIONAL ARCHIVES)",
+"x": 698,
+"y": 42,
+"at": 0
+}
+],
+"cam": [
+[
+0,
+960,
+300,
+1.25,
+0
+],
+[
+-1.1,
+960,
+760,
+1.25,
+0
+]
+],
+"t0": 769.39,
+"line": "n70",
+"vd": 4.44,
+"dk": 0.35,
+"ch": "c5",
+"t1": 774.48
+},
+{
+"type": "rivals",
+"t0": 774.48,
+"line": "n71",
+"vd": 17.26,
+"dk": 0.35,
+"ch": "c5",
+"t1": 792.39
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"items": [
+{
+"k": "drop",
+"text": "Allstate",
+"x": 520,
+"y": 420,
+"s": 90,
+"al": "center",
+"at": 0.2
+},
+{
+"k": "drop",
+"text": "Dean Witter",
+"x": 960,
+"y": 560,
+"s": 90,
+"al": "center",
+"at": -0.3
+},
+{
+"k": "drop",
+"text": "Discover",
+"x": 1400,
+"y": 420,
+"s": 90,
+"al": "center",
+"at": -0.55
+},
+{
+"k": "stamp",
+"text": "SOCKS & STOCKS",
+"x": 960,
+"y": 760,
+"s": 60,
+"rot": -4,
+"at": -0.85
+}
+],
+"t0": 792.39,
+"line": "n72",
+"vd": 12.75,
+"dk": 0.35,
+"ch": "c5",
+"t1": 805.79
+},
+{
+"type": "bars",
+"title": "THE BIGGEST RETAILER IN AMERICA",
+"data": [
+[
+"Sears",
+50,
+"until c. 1990"
+],
+[
+"Walmart",
+58,
+"from c. 1990"
+]
+],
+"max": 60,
+"at": [
+-0.15,
+-0.5
+],
+"img": "tower_river",
+"dk": 1,
+"t0": 805.79,
+"line": "n73",
+"vd": 7.73,
+"ch": "c5",
+"t1": 814.17
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "tower1974",
+"x": 712,
+"y": 70,
+"w": 495,
+"h": 820,
+"grade": "colour",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "DOCUMERICA · U.S. EPA · 1974 (NATIONAL ARCHIVES)",
+"x": 698,
+"y": 42,
+"at": 0
+}
+],
+"cam": [
+[
+0,
+960,
+530,
+1.1,
+-0.3
+],
+[
+-1.1,
+960,
+540,
+1.0,
+0
+]
+],
+"t0": 814.17,
+"line": "n74",
+"vd": 2.93,
+"dk": 0.35,
+"ch": "c5",
+"t1": 817.75
+},
+{
+"type": "blank",
+"t0": 817.75,
+"curl": 1,
+"no": "—",
+"art": "The Big Book",
+"year": "1993",
+"price": "25 JAN",
+"side": "c1902_n0",
+"sideGrade": "paper",
+"sub": "the last catalog",
+"of": "6 OF 7",
+"dk": 0.7,
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+5.4,
+930,
+530,
+1.05,
+-0.5
+]
+],
+"t1": 823.15
+},
+{
+"type": "ledger",
+"dark": 1,
+"big": "−$3,900,000,000",
+"rows": [
+[
+"1992",
+"net loss",
+"−$3.9 billion"
+]
+],
+"note": "the biggest loss a North American retailer had ever reported",
+"t0": 823.15,
+"line": "n75",
+"vd": 11.34,
+"dk": 0.7,
+"ch": "c6",
+"curl": 1,
+"t1": 835.14
+},
+{
+"type": "fan",
+"pages": [
+"c1897_n0",
+"c1902_n0",
+"c1912_n0",
+"c1918_n0",
+"c1928_n0"
+],
+"count": {
+"pre": "−$",
+"per_day": 1000000,
+"label": "a day, by one account"
+},
+"t0": 835.14,
+"line": "n76",
+"vd": 15.81,
+"dk": 0.7,
+"ch": "c6",
+"t1": 851.6
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"items": [
+{
+"k": "stamp",
+"text": "25 JAN 1993",
+"x": 960,
+"y": 300,
+"s": 90,
+"rot": -4,
+"at": 0.1
+},
+{
+"k": "drop",
+"text": "No more Big Book.",
+"x": 960,
+"y": 480,
+"s": 92,
+"al": "center",
+"at": -0.25
+},
+{
+"k": "count",
+"x": 640,
+"y": 720,
+"s": 110,
+"to": 113,
+"at": -0.55,
+"dur": 1.0,
+"al": "center",
+"note": "stores close"
+},
+{
+"k": "count",
+"x": 1280,
+"y": 720,
+"s": 110,
+"to": 50000,
+"at": -0.7,
+"dur": 1.2,
+"al": "center",
+"note": "jobs"
+}
+],
+"t0": 851.6,
+"line": "n77",
+"vd": 13.56,
+"dk": 0.7,
+"ch": "c6",
+"t1": 865.81
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "tower_river",
+"x": 610,
+"y": 78,
+"w": 700,
+"h": 793,
+"grade": "colour",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "PHOTO · W. LEMAY · 2015 (CC0)",
+"x": 596,
+"y": 50,
+"at": 0
+}
+],
+"cam": [
+[
+0,
+960,
+530,
+1.1,
+-0.3
+],
+[
+-1.1,
+960,
+540,
+1.0,
+0
+]
+],
+"t0": 865.81,
+"line": "n78",
+"vd": 7.45,
+"dk": 0.7,
+"ch": "c6",
+"t1": 873.91
+},
+{
+"type": "calendar",
+"a": [
+"25 JAN 1993",
+"the Big Book ends"
+],
+"b": [
+"5 JUL 1994",
+"a company that will become Amazon"
+],
+"flip": -0.2,
+"dark": 1,
+"t0": 873.91,
+"line": "n79",
+"vd": 12.9,
+"dk": 0.7,
+"ch": "c6",
+"t1": 887.46
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"items": [
+{
+"k": "txt",
+"text": "1993",
+"x": 960,
+"y": 260,
+"s": 110,
+"f": "OST",
+"w": 700,
+"c": "red",
+"al": "center",
+"at": 0.1
+},
+{
+"k": "drop",
+"text": "Walmart · Home Depot",
+"x": 960,
+"y": 520,
+"s": 92,
+"al": "center",
+"at": -0.45
+},
+{
+"k": "txt",
+"text": "not the internet",
+"x": 960,
+"y": 640,
+"s": 56,
+"f": "Fell",
+"it": 1,
+"al": "center",
+"at": -0.62
+}
+],
+"t0": 887.46,
+"line": "n80",
+"vd": 17.18,
+"dk": 0.7,
+"ch": "c6",
+"t1": 905.29
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "closed_brooklyn",
+"x": 351,
+"y": 70,
+"w": 1218,
+"h": 820,
+"grade": "colour",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "PHOTO · TONY WEBSTER · BROOKLYN CENTER, MINN. · 2019 (CC BY 2.0)",
+"x": 337,
+"y": 42,
+"at": 0
+}
+],
+"cam": [
+[
+0,
+960,
+530,
+1.1,
+-0.3
+],
+[
+-1.1,
+960,
+540,
+1.0,
+0
+]
+],
+"t0": 905.29,
+"line": "n81",
+"vd": 3.23,
+"dk": 0.7,
+"ch": "c6",
+"t1": 909.18
+},
+{
+"type": "blank",
+"t0": 909.18,
+"curl": 1,
+"no": "—",
+"art": "Closing Sale",
+"year": "2018",
+"price": "15 OCT",
+"side": "closing_hialeah",
+"sideGrade": "colour",
+"sub": "what happened to Sears",
+"of": "7 OF 7",
+"dk": 1,
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+5.4,
+930,
+530,
+1.05,
+-0.5
+]
+],
+"t1": 914.58
+},
+{
+"type": "dots",
+"per": 1,
+"img": "closed_vero",
+"tag": "PHOTO · POKEMONPRIME · VERO BEACH, FLA. · 2024 (CC BY 4.0)",
+"label": "Sears and Kmart stores",
+"keys": [
+[
+0,
+0
+],
+[
+-0.85,
+3500
+]
+],
+"years": [
+[
+0,
+"2005"
+]
+],
+"t0": 914.58,
+"line": "n82",
+"vd": 17.8,
+"dk": 1,
+"ch": "c7",
+"from": 3500,
+"curl": 1,
+"t1": 933.03
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "closed_vero",
+"x": 413,
+"y": 70,
+"w": 1093,
+"h": 820,
+"grade": "colour",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.08
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "PHOTO · POKEMONPRIME · VERO BEACH, FLA. · 2024 (CC BY 4.0)",
+"x": 399,
+"y": 42,
+"at": 0
+}
+],
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"t0": 933.03,
+"line": "n83",
+"vd": 14.04,
+"dk": 1,
+"ch": "c7",
+"t1": 947.72
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "craftsman_westland",
+"x": 200,
+"y": 140,
+"w": 900,
+"h": 675,
+"grade": "colour",
+"at": 0,
+"rot": -2,
+"cap": "Craftsman → Stanley Black & Decker"
+},
+{
+"k": "stamp",
+"text": "SOLD · 2017",
+"x": 1450,
+"y": 360,
+"s": 76,
+"rot": -6,
+"at": -0.4
+},
+{
+"k": "stamp",
+"text": "DIEHARD · 2019",
+"x": 1450,
+"y": 600,
+"s": 66,
+"rot": -3,
+"at": -0.75
+}
+],
+"t0": 947.72,
+"line": "n84",
+"vd": 11.54,
+"dk": 1,
+"ch": "c7",
+"t1": 959.91
+},
+{
+"type": "dots",
+"per": 1,
+"img": "closing_hialeah",
+"tag": "PHOTO · PHILLIP PESSAR · HIALEAH, FLA. · 2020 (CC BY 2.0)",
+"label": "Sears and Kmart stores",
+"keys": [
+[
+0,
+3500
+],
+[
+-0.7,
+687
+]
+],
+"years": [
+[
+0,
+"2005"
+],
+[
+-0.6,
+"2018"
+]
+],
+"t0": 959.91,
+"line": "n85",
+"vd": 11.7,
+"dk": 1,
+"ch": "c7",
+"from": 3500,
+"t1": 972.26
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "closing_hialeah",
+"x": 413,
+"y": 70,
+"w": 1093,
+"h": 820,
+"grade": "colour",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "PHOTO · PHILLIP PESSAR · HIALEAH, FLA. · 12 FEB 2020 (CC BY 2.0)",
+"x": 399,
+"y": 42,
+"at": 0
+}
+],
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+940,
+600,
+1.25,
+0
+]
+],
+"t0": 972.26,
+"line": "n86",
+"vd": 8.02,
+"dk": 1,
+"ch": "c7",
+"t1": 980.93
+},
+{
+"type": "spread",
+"items": [
+{
+"k": "ph",
+"img": "closing_hialeah",
+"x": 413,
+"y": 70,
+"w": 1093,
+"h": 820,
+"grade": "colour",
+"cap": null,
+"fy": 0.5,
+"fx": 0.5,
+"z": [
+1.0,
+1.04
+],
+"cart": 0,
+"rot": 0,
+"at": 0,
+"in": "none"
+},
+{
+"k": "tag",
+"text": "PHOTO · PHILLIP PESSAR · HIALEAH, FLA. · 12 FEB 2020 (CC BY 2.0)",
+"x": 399,
+"y": 42,
+"at": 0
+}
+],
+"cam": [
+[
+0,
+940,
+600,
+1.25,
+0
+],
+[
+-1.1,
+900,
+640,
+1.9,
+0
+]
+],
+"t0": 980.93,
+"line": "n87",
+"vd": 7.79,
+"dk": 1,
+"ch": "c7",
+"t1": 989.37
+},
+{
+"type": "dots",
+"per": 1,
+"img": "closing_hialeah",
+"tag": "PHOTO · PHILLIP PESSAR · HIALEAH, FLA. · 2020 (CC BY 2.0)",
+"label": "Sears stores",
+"keys": [
+[
+0,
+687
+],
+[
+-0.75,
+5
+]
+],
+"years": [
+[
+0,
+"2018"
+],
+[
+-0.6,
+"2025"
+]
+],
+"t0": 989.37,
+"line": "n88",
+"vd": 6.34,
+"dk": 1,
+"ch": "c7",
+"from": 3500,
+"t1": 996.36
+},
+{
+"type": "spread",
+"dk": 1,
+"cam": [
+[
+0,
+960,
+530,
+1.1,
+-0.3
+],
+[
+-1.1,
+960,
+540,
+1.0,
+0
+]
+],
+"items": [
+{
+"k": "drop",
+"text": "So what’s left?",
+"x": 960,
+"y": 520,
+"s": 110,
+"al": "center",
+"at": 0.2,
+"c": "cream"
+}
+],
+"t0": 996.36,
+"line": "n89",
+"vd": 1.24,
+"ch": "c7",
+"t1": 998.25
+},
+{
+"type": "blank",
+"t0": 998.25,
+"curl": 1,
+"no": "—",
+"art": "Your House",
+"year": "Today",
+"price": "STILL HERE",
+"side": "carl_station",
+"sideGrade": "colour",
+"sub": "what of Sears is still around you",
+"of": "",
+"dk": 0.1,
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+5.4,
+930,
+530,
+1.05,
+-0.5
+]
+],
+"t1": 1003.65
+},
+{
+"type": "map",
+"focus": "Carlinville",
+"zoom": [
+1.0,
+3.0
+],
+"towns": [
+[
+"Carlinville",
+0.2
+]
+],
+"routes": [],
+"t0": 1003.65,
+"line": "n90",
+"vd": 2.2,
+"dk": 0.1,
+"ch": "end",
+"curl": 1,
+"t1": 1006.5
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+760,
+540,
+1.0,
+0
+],
+[
+-1.1,
+1180,
+540,
+1.0,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "carl_station",
+"x": 120,
+"y": 170,
+"w": 960,
+"h": 640,
+"grade": "colour",
+"at": 0,
+"rot": -1.5,
+"cap": "Carlinville station · 2020"
+},
+{
+"k": "tag",
+"text": "PHOTO · THECATALYST31 · 2020 (CC0)",
+"x": 110,
+"y": 142,
+"at": 0
+},
+{
+"k": "ph",
+"img": "carl_courthouse",
+"x": 1250,
+"y": 110,
+"w": 533,
+"h": 780,
+"grade": "colour",
+"at": -0.5,
+"rot": 2
+},
+{
+"k": "tag",
+"text": "PHOTO · JOHN MARGOLIES · 1991 (LIBRARY OF CONGRESS)",
+"x": 1240,
+"y": 82,
+"at": -0.5
+}
+],
+"t0": 1006.5,
+"line": "n91",
+"vd": 9.75,
+"dk": 0.1,
+"ch": "end",
+"t1": 1016.89
+},
+{
+"type": "house",
+"phase": "today",
+"t0": 1016.89,
+"line": "n92",
+"vd": 11.36,
+"dk": 0.1,
+"ch": "end",
+"t1": 1028.9
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+700,
+540,
+1.0,
+0
+],
+[
+-1.1,
+1250,
+540,
+1.0,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "craftsman_westland",
+"x": 90,
+"y": 160,
+"w": 640,
+"h": 480,
+"grade": "colour",
+"at": 0,
+"rot": -2,
+"cap": "Craftsman"
+},
+{
+"k": "ph",
+"img": "kenmore",
+"x": 800,
+"y": 150,
+"w": 480,
+"h": 640,
+"grade": "colour",
+"at": -0.25,
+"rot": 1.5,
+"cap": "Kenmore"
+},
+{
+"k": "ph",
+"img": "tower_river",
+"x": 1330,
+"y": 110,
+"w": 618,
+"h": 700,
+"grade": "colour",
+"at": -0.6,
+"rot": -1,
+"cap": "Willis Tower · since 2009"
+}
+],
+"t0": 1028.9,
+"line": "n93",
+"vd": 17.96,
+"dk": 0.1,
+"ch": "end",
+"t1": 1047.51
+},
+{
+"type": "map",
+"focus": "Chicago",
+"zoom": [
+1.0,
+1.0
+],
+"towns": [
+[
+"Chicago",
+0
+]
+],
+"swarm": {
+"src": "Chicago",
+"n": 120,
+"at": 0.1,
+"dur": -0.9,
+"r": 1400
+},
+"warm": 1,
+"t0": 1047.51,
+"line": "n94",
+"vd": 11.87,
+"dk": 0.1,
+"ch": "end",
+"t1": 1060.03
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"items": [
+{
+"k": "cut",
+"img": "cut_watch_b",
+"x": 960,
+"y": 470,
+"w": 520,
+"rot": 0,
+"at": 0,
+"grade": "paper"
+},
+{
+"k": "drop",
+"text": "The third time, it let go.",
+"x": 960,
+"y": 880,
+"s": 70,
+"al": "center",
+"at": 0.4
+}
+],
+"t0": 1060.03,
+"line": "n95",
+"vd": 3.09,
+"dk": 0.1,
+"ch": "end",
+"t1": 1063.77
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+530,
+1.1,
+-0.3
+],
+[
+-1.1,
+960,
+540,
+1.0,
+0
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "carl1921_street2",
+"x": 140,
+"y": 140,
+"w": 1640,
+"h": 655,
+"grade": "sepia",
+"at": 0,
+"in": "none",
+"cap": "Carlinville, Ill."
+},
+{
+"k": "cut",
+"img": "cut_mast1897",
+"x": 960,
+"y": 860,
+"w": 900,
+"at": -0.6,
+"grade": "paper"
+}
+],
+"t0": 1063.77,
+"line": "n96",
+"vd": 11.65,
+"dk": 0.1,
+"ch": "end",
+"t1": 1076.08
+},
+{
+"type": "spread",
+"cam": [
+[
+0,
+960,
+540,
+1.0,
+0
+],
+[
+-1.1,
+980,
+530,
+1.07,
+0.4
+]
+],
+"items": [
+{
+"k": "ph",
+"img": "hb1921_quantity",
+"x": 190,
+"y": 70,
+"w": 601,
+"h": 850,
+"grade": "paper",
+"at": 0,
+"rot": -1.5
+},
+{
+"k": "ph",
+"img": "c1928_n460",
+"x": 1130,
+"y": 90,
+"w": 608,
+"h": 830,
+"grade": "paper",
+"at": 0.3,
+"rot": 2
+},
+{
+"k": "hand",
+"text": "Did your family order from the catalog?",
+"x": 960,
+"y": 560,
+"s": 62,
+"at": -0.1,
+"dur": 2.2,
+"al": "center"
+}
+],
+"t0": 1076.08,
+"line": "n97",
+"vd": 10.47,
+"dk": 0.1,
+"ch": "end",
+"t1": 1087.8
+},
+{
+"type": "end",
+"t0": 1087.8,
+"curl": 1,
+"dk": 0.1,
+"t1": 1105.8
+}
+],
+"vo": {
+"n01": 0.6,
+"n02": 3.308,
+"n03": 11.042,
+"n04": 22.467,
+"n05": 29.887,
+"n06": 40.417,
+"n07": 51.767,
+"n08": 59.427,
+"n09": 63.922,
+"n10": 74.294,
+"n11": 86.364,
+"n12": 99.394,
+"n13": 113.524,
+"n14": 124.754,
+"n15": 133.637,
+"n16": 147.127,
+"n17": 157.455,
+"n18": 171.605,
+"n19": 187.535,
+"n20": 196.325,
+"n21": 209.875,
+"n22": 224.435,
+"n23": 234.563,
+"n24": 246.343,
+"n25": 258.964,
+"n26": 267.894,
+"n27": 282.394,
+"n28": 291.247,
+"n29": 307.097,
+"n30": 314.747,
+"n31": 327.967,
+"n32": 341.697,
+"n33": 352.137,
+"q01": 362.557,
+"n34": 370.481,
+"n35": 379.431,
+"n36": 389.944,
+"n37": 403.704,
+"n38": 414.231,
+"n39": 427.487,
+"n40": 435.077,
+"n41": 453.057,
+"n42": 461.428,
+"n43": 475.216,
+"n44": 479.546,
+"n45": 487.27,
+"n46": 500.69,
+"n47": 510.3,
+"n48": 520.08,
+"n49": 533.47,
+"n50": 546.06,
+"n51": 553.954,
+"n52": 563.274,
+"n53": 579.574,
+"n54": 592.694,
+"n55": 608.334,
+"n56": 629.914,
+"n57": 647.043,
+"n58": 654.873,
+"n59": 662.903,
+"n60": 672.554,
+"n61": 681.557,
+"n62": 688.863,
+"n63": 695.608,
+"n64": 705.321,
+"n65": 721.321,
+"n66": 724.954,
+"n67": 734.115,
+"n68": 745.454,
+"n69": 761.654,
+"n70": 769.394,
+"n71": 774.483,
+"n72": 792.393,
+"n73": 805.793,
+"n74": 814.173,
+"n75": 823.153,
+"n76": 835.143,
+"n77": 851.602,
+"n78": 865.812,
+"n79": 873.912,
+"n80": 887.462,
+"n81": 905.292,
+"n82": 914.576,
+"n83": 933.026,
+"n84": 947.716,
+"n85": 959.906,
+"n86": 972.256,
+"n87": 980.927,
+"n88": 989.366,
+"n89": 996.356,
+"n90": 1003.646,
+"n91": 1006.495,
+"n92": 1016.893,
+"n93": 1028.904,
+"n94": 1047.514,
+"n95": 1060.034,
+"n96": 1063.773,
+"n97": 1076.078
+},
+"subs": [
+{
+"t0": 0.52,
+"t1": 2.96,
+"text": "Take a look around your house."
+},
+{
+"t0": 3.23,
+"t1": 7.55,
+"text": "Maybe there's a wrench in the garage that says Craftsman."
+},
+{
+"t0": 7.57,
+"t1": 10.69,
+"text": "A washing machine that says Kenmore."
+},
+{
+"t0": 10.96,
+"t1": 14.51,
+"text": "And maybe, a few streets away, there's a house"
+},
+{
+"t0": 14.53,
+"t1": 18.07,
+"text": "that arrived by train, in thousands of pieces,"
+},
+{
+"t0": 18.09,
+"t1": 22.12,
+"text": "with a book of instructions to put it together."
+},
+{
+"t0": 22.39,
+"t1": 25.4,
+"text": "All of it came from the same place."
+},
+{
+"t0": 25.42,
+"t1": 29.54,
+"text": "A company in Chicago called Sears, Roebuck."
+},
+{
+"t0": 29.81,
+"t1": 34.67,
+"text": "In 1886, a railroad station agent in Minnesota"
+},
+{
+"t0": 34.69,
+"t1": 40.07,
+"text": "started selling watches by mail, at $14 apiece."
+},
+{
+"t0": 40.34,
+"t1": 46.21,
+"text": "Within a few decades, his company would sell you almost anything."
+},
+{
+"t0": 46.23,
+"t1": 51.42,
+"text": "A dress. A plow. A doll for Christmas. A whole house."
+},
+{
+"t0": 51.69,
+"t1": 56.04,
+"text": "For millions of families on farms and in small towns,"
+},
+{
+"t0": 56.06,
+"t1": 59.08,
+"text": "the Sears catalog was the store."
+},
+{
+"t0": 59.35,
+"t1": 63.57,
+"text": "People like to call Sears the Amazon of its time."
+},
+{
+"t0": 63.84,
+"t1": 69.79,
+"text": "Then, in 1993, Sears stopped printing its big catalog."
+},
+{
+"t0": 69.81,
+"t1": 73.94,
+"text": "The next year, Amazon was founded."
+},
+{
+"t0": 74.21,
+"t1": 77.61,
+"text": "This is the story of what happened to Sears."
+},
+{
+"t0": 77.63,
+"t1": 82.51,
+"text": "Every photograph you'll see is real, every number has a source,"
+},
+{
+"t0": 82.53,
+"t1": 86.01,
+"text": "and you'll see the actual catalog pages."
+},
+{
+"t0": 86.28,
+"t1": 90.45,
+"text": "We'll tell it through seven things Sears sold."
+},
+{
+"t0": 90.47,
+"t1": 94.0,
+"text": "A watch. The catalog. A house. A store."
+},
+{
+"t0": 94.02,
+"t1": 99.04,
+"text": "A tower. The last catalog. And a closing-sale sign."
+},
+{
+"t0": 99.31,
+"t1": 103.41,
+"text": "If you ever waited for the Christmas catalog to arrive,"
+},
+{
+"t0": 103.43,
+"t1": 107.77,
+"text": "and circled the toys you wanted, this one is for you."
+},
+{
+"t0": 113.44,
+"t1": 116.38,
+"text": "North Redwood, Minnesota. 1886."
+},
+{
+"t0": 116.4,
+"t1": 119.91,
+"text": "Richard Warren Sears is 22 years old,"
+},
+{
+"t0": 119.93,
+"t1": 124.4,
+"text": "and he's the agent at the railroad station."
+},
+{
+"t0": 124.67,
+"t1": 129.26,
+"text": "One day, a shipment of watches arrives for a jeweler"
+},
+{
+"t0": 129.28,
+"t1": 133.29,
+"text": "in a nearby town. The jeweler refuses it."
+},
+{
+"t0": 133.56,
+"t1": 138.56,
+"text": "Instead of sending the watches back, Sears buys them himself."
+},
+{
+"t0": 138.58,
+"t1": 143.5,
+"text": "He offers them to other station agents up and down the line,"
+},
+{
+"t0": 143.52,
+"t1": 146.78,
+"text": "at $14 each, and they sell them on."
+},
+{
+"t0": 147.05,
+"t1": 151.02,
+"text": "Within six months, he has made $5,000."
+},
+{
+"t0": 151.04,
+"t1": 157.11,
+"text": "So he leaves the railroad, and starts a watch company."
+},
+{
+"t0": 157.38,
+"t1": 163.03,
+"text": "In 1887, he moves it to Chicago, where the railroads meet,"
+},
+{
+"t0": 163.05,
+"t1": 167.63,
+"text": "and hires a young watch repairman from Indiana."
+},
+{
+"t0": 167.65,
+"t1": 171.26,
+"text": "His name is Alvah Curtis Roebuck."
+},
+{
+"t0": 171.53,
+"t1": 176.16,
+"text": "This is one of their advertisements, from a newspaper"
+},
+{
+"t0": 176.18,
+"t1": 179.67,
+"text": "in Winchester, Indiana, in January 1888."
+},
+{
+"t0": 179.69,
+"t1": 182.66,
+"text": "Look at the promise at the bottom."
+},
+{
+"t0": 182.68,
+"t1": 187.19,
+"text": "You could see the watch before you paid for it."
+},
+{
+"t0": 187.46,
+"t1": 192.48,
+"text": "In 1893, the company takes both their names."
+},
+{
+"t0": 192.5,
+"t1": 195.98,
+"text": "Sears, Roebuck and Company."
+},
+{
+"t0": 196.25,
+"t1": 200.55,
+"text": "Sears writes the advertising, almost all of it himself."
+},
+{
+"t0": 200.57,
+"t1": 204.56,
+"text": "And he finds that people far from any city will buy"
+},
+{
+"t0": 204.58,
+"t1": 209.53,
+"text": "almost anything by mail, as long as they trust the sender."
+},
+{
+"t0": 209.8,
+"t1": 214.81,
+"text": "In 1895, Roebuck sells out. A Chicago clothing man"
+},
+{
+"t0": 214.83,
+"t1": 220.16,
+"text": "named Julius Rosenwald buys in, and turns a brilliant"
+},
+{
+"t0": 220.18,
+"t1": 224.09,
+"text": "salesman's business into a machine."
+},
+{
+"t0": 224.36,
+"t1": 227.81,
+"text": "Here are the men in charge that year."
+},
+{
+"t0": 227.83,
+"t1": 234.21,
+"text": "Sears, the president. Aaron Nusbaum, the manager. And Rosenwald."
+},
+{
+"t0": 234.48,
+"t1": 242.07,
+"text": "Between 1895 and 1907, sales grow from $750,000 a year"
+},
+{
+"t0": 242.09,
+"t1": 245.99,
+"text": "to more than $50 million."
+},
+{
+"t0": 246.26,
+"t1": 251.39,
+"text": "So if a watch could travel by mail to a farm in Minnesota,"
+},
+{
+"t0": 251.41,
+"t1": 253.21,
+"text": "what else could?"
+},
+{
+"t0": 258.88,
+"t1": 263.32,
+"text": "This is the Sears catalog for the spring of 1897."
+},
+{
+"t0": 263.34,
+"t1": 267.54,
+"text": "The company called it the Consumers Guide."
+},
+{
+"t0": 267.81,
+"t1": 275.88,
+"text": "Not long before, it had been a little book of watches and jewelry."
+},
+{
+"t0": 275.9,
+"t1": 279.44,
+"text": "By 1894, it ran to 322 pages."
+},
+{
+"t0": 279.46,
+"t1": 282.04,
+"text": "A year later, 532."
+},
+{
+"t0": 282.31,
+"t1": 287.06,
+"text": "Groceries. Stoves. Dolls. Medicines."
+},
+{
+"t0": 287.08,
+"t1": 290.9,
+"text": "Bicycles. Clothing. Plows."
+},
+{
+"t0": 291.17,
+"t1": 294.85,
+"text": "And it reached people where the stores couldn't."
+},
+{
+"t0": 294.87,
+"t1": 298.79,
+"text": "In 1896, the Post Office began Rural Free Delivery."
+},
+{
+"t0": 298.81,
+"t1": 303.57,
+"text": "For the first time, a farm family's mail came to its own gate,"
+},
+{
+"t0": 303.59,
+"t1": 306.75,
+"text": "instead of waiting for them in town."
+},
+{
+"t0": 307.02,
+"t1": 309.33,
+"text": "In 1913 came Parcel Post,"
+},
+{
+"t0": 309.35,
+"t1": 314.4,
+"text": "and the mail carrier could bring the packages too."
+},
+{
+"t0": 314.67,
+"t1": 321.37,
+"text": "By 1908, more than one in five Americans received the catalog."
+},
+{
+"t0": 321.39,
+"t1": 327.62,
+"text": "At its peak, it offered 100,000 items, on 1,400 pages."
+},
+{
+"t0": 327.89,
+"t1": 333.05,
+"text": "To fill the orders, Sears built a plant on Chicago's West Side."
+},
+{
+"t0": 333.07,
+"t1": 336.92,
+"text": "When it opened in 1906, its mail-order building"
+},
+{
+"t0": 336.94,
+"t1": 341.35,
+"text": "was the largest commercial building in the world."
+},
+{
+"t0": 341.62,
+"t1": 344.42,
+"text": "Railroad tracks ran right into it."
+},
+{
+"t0": 344.44,
+"t1": 348.73,
+"text": "Orders rode on belts and chutes from floor to floor,"
+},
+{
+"t0": 348.75,
+"t1": 351.79,
+"text": "and parcels left by the carload."
+},
+{
+"t0": 352.06,
+"t1": 356.37,
+"text": "And the catalog printed its customers' letters."
+},
+{
+"t0": 356.39,
+"t1": 362.21,
+"text": "Here's one, from Chapel Hill, North Carolina, January 1897."
+},
+{
+"t0": 362.48,
+"t1": 367.49,
+"text": "“I am much pleased. So far it is all you claim for it."
+},
+{
+"t0": 367.51,
+"t1": 370.13,
+"text": "It keeps splendid time.”"
+},
+{
+"t0": 370.4,
+"t1": 374.0,
+"text": "At the bottom of the page, Sears printed a dare."
+},
+{
+"t0": 374.02,
+"t1": 379.08,
+"text": "If you think mail-order buying doesn't pay, give us one trial."
+},
+{
+"t0": 379.35,
+"t1": 384.05,
+"text": "And every autumn, the catalog grew a Christmas section."
+},
+{
+"t0": 384.07,
+"t1": 389.59,
+"text": "Toys. Dolls. Stockings stuffed with presents, ready to mail."
+},
+{
+"t0": 389.86,
+"t1": 395.27,
+"text": "In 1933, Sears printed its first separate Christmas catalog."
+},
+{
+"t0": 395.29,
+"t1": 398.43,
+"text": "Families had their own name for it,"
+},
+{
+"t0": 398.45,
+"t1": 403.35,
+"text": "and in 1968 Sears made it official. The Wish Book."
+},
+{
+"t0": 403.62,
+"t1": 407.2,
+"text": "Maybe you remember it. The toys at the back."
+},
+{
+"t0": 407.22,
+"t1": 409.15,
+"text": "The corners folded down."
+},
+{
+"t0": 409.17,
+"t1": 413.88,
+"text": "The circles you drew around the things you hoped for."
+},
+{
+"t0": 414.15,
+"t1": 418.55,
+"text": "So, if you could buy the stove and the sewing machine by mail,"
+},
+{
+"t0": 418.57,
+"t1": 421.74,
+"text": "could you buy the house to put them in?"
+},
+{
+"t0": 427.41,
+"t1": 431.12,
+"text": "In 1908, Sears began selling houses."
+},
+{
+"t0": 431.14,
+"t1": 434.73,
+"text": "Not just the plans. The houses."
+},
+{
+"t0": 435.0,
+"t1": 439.08,
+"text": "You picked one from a catalog called Modern Homes,"
+},
+{
+"t0": 439.1,
+"t1": 444.34,
+"text": "and Sears sent it by rail. The lumber, cut to size and numbered."
+},
+{
+"t0": 444.36,
+"t1": 448.04,
+"text": "The nails, the doors, the windows, the paint."
+},
+{
+"t0": 448.06,
+"t1": 452.71,
+"text": "As many as 30,000 parts, and a book of instructions."
+},
+{
+"t0": 452.98,
+"t1": 456.67,
+"text": "Sears said a man of average abilities"
+},
+{
+"t0": 456.69,
+"t1": 461.08,
+"text": "could put one together in about 90 days."
+},
+{
+"t0": 461.35,
+"t1": 466.01,
+"text": "Between 1908 and 1940, Sears sold somewhere between"
+},
+{
+"t0": 466.03,
+"t1": 470.42,
+"text": "70,000 and 75,000 of them. No one knows exactly,"
+},
+{
+"t0": 470.44,
+"t1": 474.87,
+"text": "because Sears didn't keep the sales records."
+},
+{
+"t0": 475.14,
+"t1": 479.2,
+"text": "Which brings us to a small town in Illinois."
+},
+{
+"t0": 479.47,
+"t1": 483.52,
+"text": "Carlinville sits about 40 miles south of Springfield,"
+},
+{
+"t0": 483.54,
+"t1": 486.92,
+"text": "in the coal country of Macoupin County."
+},
+{
+"t0": 487.19,
+"t1": 492.36,
+"text": "In 1918, Standard Oil of Indiana opened coal mines near the town,"
+},
+{
+"t0": 492.38,
+"t1": 495.55,
+"text": "and the miners needed somewhere to live."
+},
+{
+"t0": 495.57,
+"t1": 500.34,
+"text": "So the company ordered houses from Sears. Lots of them."
+},
+{
+"t0": 500.61,
+"t1": 504.32,
+"text": "192 houses, for about a million dollars."
+},
+{
+"t0": 504.34,
+"t1": 509.95,
+"text": "It's the largest order for Sears houses anyone knows of."
+},
+{
+"t0": 510.22,
+"t1": 512.71,
+"text": "Most of them went to Carlinville,"
+},
+{
+"t0": 512.73,
+"t1": 516.36,
+"text": "onto a new neighborhood of about a dozen blocks."
+},
+{
+"t0": 516.38,
+"t1": 519.73,
+"text": "People called it the Standard Addition."
+},
+{
+"t0": 520.0,
+"t1": 525.86,
+"text": "Here's one of the designs Sears was selling that year."
+},
+{
+"t0": 525.88,
+"t1": 531.96,
+"text": "The Carlin. Five rooms, a porch, and a balcony upstairs."
+},
+{
+"t0": 531.98,
+"t1": 533.12,
+"text": "$1,172."
+},
+{
+"t0": 533.39,
+"t1": 536.36,
+"text": "And Sears was proud of Carlinville."
+},
+{
+"t0": 536.38,
+"t1": 540.96,
+"text": "A few years later, it put the town in its own catalog."
+},
+{
+"t0": 540.98,
+"t1": 545.71,
+"text": "“We sell houses,” the page says. “In any quantity.”"
+},
+{
+"t0": 545.98,
+"t1": 549.49,
+"text": "These are the street views it printed."
+},
+{
+"t0": 549.51,
+"t1": 553.6,
+"text": "The Standard Addition, new, around 1920."
+},
+{
+"t0": 553.87,
+"t1": 556.53,
+"text": "But the coal didn't last."
+},
+{
+"t0": 556.55,
+"t1": 562.92,
+"text": "In 1925, Standard Oil closed its mines near Carlinville."
+},
+{
+"t0": 563.19,
+"t1": 568.13,
+"text": "At the mining camp of Schoper nearby, local historians say"
+},
+{
+"t0": 568.15,
+"t1": 572.75,
+"text": "most of the Sears houses were taken apart, loaded back"
+},
+{
+"t0": 572.77,
+"t1": 576.26,
+"text": "onto boxcars, and left the way they came."
+},
+{
+"t0": 576.28,
+"t1": 579.22,
+"text": "Schoper is a ghost town today."
+},
+{
+"t0": 579.49,
+"t1": 582.53,
+"text": "But in Carlinville, the houses stayed."
+},
+{
+"t0": 582.55,
+"t1": 585.51,
+"text": "About 150 of them are still standing."
+},
+{
+"t0": 585.53,
+"t1": 589.69,
+"text": "It's thought to be the largest group of Sears houses"
+},
+{
+"t0": 589.71,
+"t1": 592.34,
+"text": "in one place in the country."
+},
+{
+"t0": 592.61,
+"t1": 596.14,
+"text": "And there are Sears houses all over America"
+},
+{
+"t0": 596.16,
+"t1": 598.28,
+"text": "whose owners have no idea."
+},
+{
+"t0": 598.3,
+"t1": 602.07,
+"text": "If your house was built between 1908 and 1940,"
+},
+{
+"t0": 602.09,
+"t1": 604.87,
+"text": "look in the basement or the attic,"
+},
+{
+"t0": 604.89,
+"t1": 607.98,
+"text": "for numbers stamped on the beams."
+},
+{
+"t0": 608.25,
+"t1": 611.87,
+"text": "There's a harder part of the story, too."
+},
+{
+"t0": 611.89,
+"t1": 615.97,
+"text": "From about 1912, Sears lent buyers the money."
+},
+{
+"t0": 615.99,
+"t1": 619.97,
+"text": "When the Depression came, many couldn't pay."
+},
+{
+"t0": 619.99,
+"t1": 625.25,
+"text": "Sears had to sell off about $11 million in loans gone bad,"
+},
+{
+"t0": 625.27,
+"t1": 629.56,
+"text": "and at the end of 1933, it stopped lending."
+},
+{
+"t0": 629.83,
+"t1": 632.87,
+"text": "The house catalog ended in 1940."
+},
+{
+"t0": 632.89,
+"t1": 636.98,
+"text": "By then, Sears had found a new way to sell."
+},
+{
+"t0": 637.0,
+"t1": 641.29,
+"text": "And this one didn't need the mail at all."
+},
+{
+"t0": 646.96,
+"t1": 650.72,
+"text": "By the 1920s, the farm family had a car."
+},
+{
+"t0": 650.74,
+"t1": 654.52,
+"text": "And the car could take them to town."
+},
+{
+"t0": 654.79,
+"t1": 659.1,
+"text": "A retired Army general named Robert Wood joined Sears,"
+},
+{
+"t0": 659.12,
+"t1": 662.55,
+"text": "and he believed the future was stores."
+},
+{
+"t0": 662.82,
+"t1": 667.99,
+"text": "On 2 February 1925, the first Sears store opened,"
+},
+{
+"t0": 668.01,
+"t1": 672.2,
+"text": "inside the catalog plant in Chicago."
+},
+{
+"t0": 672.47,
+"t1": 677.44,
+"text": "By the end of 1927, there were 27."
+},
+{
+"t0": 677.46,
+"t1": 681.21,
+"text": "By 1932, more than 300."
+},
+{
+"t0": 681.48,
+"t1": 684.5,
+"text": "And in 1931, for the first time,"
+},
+{
+"t0": 684.52,
+"t1": 688.51,
+"text": "the stores sold more than the catalog."
+},
+{
+"t0": 688.78,
+"t1": 695.26,
+"text": "Here's the Sears building in Allentown, Pennsylvania, in 1929."
+},
+{
+"t0": 695.53,
+"t1": 700.66,
+"text": "In town after town, Sears became the store on Main Street."
+},
+{
+"t0": 700.68,
+"t1": 704.97,
+"text": "Later, the big store at the end of the mall."
+},
+{
+"t0": 705.24,
+"t1": 709.7,
+"text": "It sold its own names. Kenmore had first appeared"
+},
+{
+"t0": 709.72,
+"t1": 712.26,
+"text": "on a sewing machine in 1913."
+},
+{
+"t0": 712.28,
+"t1": 715.73,
+"text": "In 1927, it went on a washing machine."
+},
+{
+"t0": 715.75,
+"t1": 720.97,
+"text": "The same year, Sears started selling Craftsman tools."
+},
+{
+"t0": 721.24,
+"t1": 724.6,
+"text": "Maybe that's the wrench in your garage."
+},
+{
+"t0": 724.87,
+"t1": 728.37,
+"text": "So how big could one company get?"
+},
+{
+"t0": 734.04,
+"t1": 739.31,
+"text": "By the 1960s, Sears was the biggest retailer in America."
+},
+{
+"t0": 739.33,
+"t1": 745.1,
+"text": "And in 1970, it started building a headquarters to match."
+},
+{
+"t0": 745.37,
+"t1": 750.75,
+"text": "When it opened in 1973, the Sears Tower in Chicago"
+},
+{
+"t0": 750.77,
+"t1": 756.15,
+"text": "was the tallest building in the world. 1,451 feet."
+},
+{
+"t0": 756.17,
+"t1": 761.3,
+"text": "It would hold the title for nearly 25 years."
+},
+{
+"t0": 761.57,
+"t1": 765.65,
+"text": "Sears moved its offices out of the old catalog plant"
+},
+{
+"t0": 765.67,
+"t1": 769.04,
+"text": "on the West Side, and up into the sky."
+},
+{
+"t0": 769.31,
+"t1": 774.13,
+"text": "But down on the ground, shopping was changing again."
+},
+{
+"t0": 774.4,
+"t1": 779.51,
+"text": "A discount chain from Arkansas called Walmart was growing fast,"
+},
+{
+"t0": 779.53,
+"t1": 782.28,
+"text": "in exactly the kind of small towns"
+},
+{
+"t0": 782.3,
+"t1": 784.89,
+"text": "Sears had built its business on."
+},
+{
+"t0": 784.91,
+"t1": 789.53,
+"text": "And new stores that sold just one thing, like Home Depot,"
+},
+{
+"t0": 789.55,
+"t1": 792.04,
+"text": "sold more of it, for less."
+},
+{
+"t0": 792.31,
+"t1": 797.42,
+"text": "Sears tried to be everything at once. It owned Allstate insurance."
+},
+{
+"t0": 797.44,
+"t1": 800.3,
+"text": "It bought a stockbroker, Dean Witter."
+},
+{
+"t0": 800.32,
+"t1": 805.44,
+"text": "It launched the Discover card. Its stores kept losing ground."
+},
+{
+"t0": 805.71,
+"t1": 810.28,
+"text": "By the start of the 1990s, Walmart had passed Sears"
+},
+{
+"t0": 810.3,
+"t1": 813.82,
+"text": "as the biggest retailer in America."
+},
+{
+"t0": 814.09,
+"t1": 817.4,
+"text": "What would Sears give up to survive?"
+},
+{
+"t0": 823.07,
+"t1": 826.8,
+"text": "In 1992, Sears lost $3.9 billion."
+},
+{
+"t0": 826.82,
+"t1": 832.35,
+"text": "It was the biggest loss a North American retailer"
+},
+{
+"t0": 832.37,
+"t1": 834.79,
+"text": "had ever reported."
+},
+{
+"t0": 835.06,
+"t1": 839.22,
+"text": "The catalog was part of the problem. By one account,"
+},
+{
+"t0": 839.24,
+"t1": 843.15,
+"text": "it was losing as much as a million dollars a day."
+},
+{
+"t0": 843.17,
+"t1": 847.16,
+"text": "Printing a book of some 1,500 pages and mailing it"
+},
+{
+"t0": 847.18,
+"t1": 851.25,
+"text": "to millions of homes had become too expensive."
+},
+{
+"t0": 851.52,
+"t1": 856.93,
+"text": "On 25 January 1993, Sears announced the end."
+},
+{
+"t0": 856.95,
+"t1": 859.02,
+"text": "No more Big Book."
+},
+{
+"t0": 859.04,
+"t1": 865.46,
+"text": "113 stores would close, and 50,000 jobs would go."
+},
+{
+"t0": 865.73,
+"t1": 869.88,
+"text": "That year, Sears also began moving out of its tower,"
+},
+{
+"t0": 869.9,
+"t1": 873.56,
+"text": "to new offices in the suburbs of Chicago."
+},
+{
+"t0": 873.83,
+"t1": 878.73,
+"text": "And on 5 July 1994, a man in Washington State"
+},
+{
+"t0": 878.75,
+"t1": 884.2,
+"text": "started a company to sell books over the internet."
+},
+{
+"t0": 884.22,
+"t1": 887.11,
+"text": "It would become Amazon."
+},
+{
+"t0": 887.38,
+"t1": 891.28,
+"text": "It's easy now to say Sears threw the future away."
+},
+{
+"t0": 891.3,
+"t1": 894.63,
+"text": "But in 1993, almost nobody shopped online."
+},
+{
+"t0": 894.65,
+"t1": 898.95,
+"text": "The danger Sears could see was Walmart and Home Depot,"
+},
+{
+"t0": 898.97,
+"t1": 900.31,
+"text": "not the internet."
+},
+{
+"t0": 900.33,
+"t1": 904.94,
+"text": "Ending the catalog was a decision to save the stores."
+},
+{
+"t0": 905.21,
+"t1": 908.83,
+"text": "Could the stores alone keep Sears alive?"
+},
+{
+"t0": 914.5,
+"t1": 918.85,
+"text": "In 2004, Kmart announced it would buy Sears."
+},
+{
+"t0": 918.87,
+"t1": 924.42,
+"text": "Kmart was controlled by an investor named Eddie Lampert."
+},
+{
+"t0": 924.44,
+"t1": 927.4,
+"text": "The deal closed in March 2005."
+},
+{
+"t0": 927.42,
+"t1": 932.68,
+"text": "Together, Sears and Kmart had about 3,500 stores."
+},
+{
+"t0": 932.95,
+"t1": 937.16,
+"text": "Lampert cut costs and looked for value in the real estate"
+},
+{
+"t0": 937.18,
+"t1": 940.5,
+"text": "under the stores. His critics said too little"
+},
+{
+"t0": 940.52,
+"t1": 943.25,
+"text": "went back into the stores themselves."
+},
+{
+"t0": 943.27,
+"t1": 947.37,
+"text": "His supporters said the shoppers had already gone."
+},
+{
+"t0": 947.64,
+"t1": 951.28,
+"text": "One by one, the famous names were sold."
+},
+{
+"t0": 951.3,
+"t1": 955.87,
+"text": "Craftsman went to Stanley Black & Decker in 2017."
+},
+{
+"t0": 955.89,
+"t1": 959.56,
+"text": "DieHard batteries, two years later."
+},
+{
+"t0": 959.83,
+"t1": 966.7,
+"text": "On 15 October 2018, Sears Holdings filed for bankruptcy."
+},
+{
+"t0": 966.72,
+"t1": 971.91,
+"text": "It had 687 Sears and Kmart stores left."
+},
+{
+"t0": 972.18,
+"t1": 977.01,
+"text": "Lampert bought what remained at auction, through a new company."
+},
+{
+"t0": 977.03,
+"t1": 980.58,
+"text": "And the closing-sale signs kept going up."
+},
+{
+"t0": 980.85,
+"t1": 986.97,
+"text": "This is the Sears in Hialeah, Florida, in February 2020."
+},
+{
+"t0": 986.99,
+"t1": 989.02,
+"text": "Last five days."
+},
+{
+"t0": 989.29,
+"t1": 993.38,
+"text": "By the end of 2025, there were five Sears stores"
+},
+{
+"t0": 993.4,
+"t1": 996.01,
+"text": "left in the United States."
+},
+{
+"t0": 996.28,
+"t1": 997.9,
+"text": "So what's left?"
+},
+{
+"t0": 1003.57,
+"t1": 1006.15,
+"text": "Go back to Carlinville."
+},
+{
+"t0": 1006.42,
+"t1": 1008.73,
+"text": "The coal mines are long gone."
+},
+{
+"t0": 1008.75,
+"t1": 1012.28,
+"text": "The trains still stop at the little station,"
+},
+{
+"t0": 1012.3,
+"t1": 1016.54,
+"text": "and the courthouse still stands over the square."
+},
+{
+"t0": 1016.81,
+"t1": 1021.14,
+"text": "And in the Standard Addition, about 150 Sears houses"
+},
+{
+"t0": 1021.16,
+"t1": 1023.31,
+"text": "are still somebody's home."
+},
+{
+"t0": 1023.33,
+"t1": 1028.55,
+"text": "More than a hundred years after they came in on the train."
+},
+{
+"t0": 1028.82,
+"t1": 1031.67,
+"text": "Look around your own house again."
+},
+{
+"t0": 1031.69,
+"t1": 1034.53,
+"text": "The Craftsman wrench still turns."
+},
+{
+"t0": 1034.55,
+"t1": 1037.83,
+"text": "Kenmore is still a name on appliances."
+},
+{
+"t0": 1037.85,
+"t1": 1042.25,
+"text": "And in Chicago, the tower Sears built still stands,"
+},
+{
+"t0": 1042.27,
+"t1": 1047.16,
+"text": "though since 2009 it's been called the Willis Tower."
+},
+{
+"t0": 1047.43,
+"t1": 1050.9,
+"text": "Sears had the future in its hands more than once."
+},
+{
+"t0": 1050.92,
+"t1": 1054.59,
+"text": "It brought the city store to the farm gate, by mail."
+},
+{
+"t0": 1054.61,
+"t1": 1059.68,
+"text": "It brought the store to the end of the road, when the car arrived."
+},
+{
+"t0": 1059.95,
+"t1": 1063.42,
+"text": "The third time, it let go."
+},
+{
+"t0": 1063.69,
+"t1": 1068.77,
+"text": "But a lot of it is still here. In the houses. In the toolboxes."
+},
+{
+"t0": 1068.79,
+"t1": 1072.82,
+"text": "And in the memory of a book that came in the mail,"
+},
+{
+"t0": 1072.84,
+"t1": 1075.73,
+"text": "with the whole world inside it."
+},
+{
+"t0": 1076.0,
+"t1": 1081.56,
+"text": "Did your family order from the catalog, or live in a Sears house?"
+},
+{
+"t0": 1081.58,
+"t1": 1086.85,
+"text": "Tell us in the comments. Next time: Rochester, and Kodak."
+}
+]
+}

@@ -1,0 +1,45 @@
+# Finish the film on GitHub: take the picture-only render from a "Render film" run, add the mastered soundtrack
+# (audio/master/soundtrack.m4a.part*, joined back together), and encode one TV-ready MP4 (H.264 CRF 21, AAC 320k copied).
+# gh workflow run finish.yml -f run_id=<render run id>
+name: Finish film
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id: { description: 'Run id of the "Render film" run whose sears-video artifact to use', required: true }
+      crf: { description: 'x264 quality (lower = bigger file)', default: '21' }
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  finish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+        with: { path: film }
+      - uses: actions/download-artifact@v4
+        with:
+          name: sears-video
+          path: pic
+          run-id: ${{ inputs.run_id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Join picture and soundtrack, encode
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          cat film/audio/master/soundtrack.m4a.part* > soundtrack.m4a
+          ffprobe -v error -show_entries format=duration -of csv=p=0 soundtrack.m4a
+          ffprobe -v error -show_entries format=duration -of csv=p=0 pic/sears-video.mp4
+          ffmpeg -v error -stats -y -i pic/sears-video.mp4 -i soundtrack.m4a -map 0:v -map 1:a \
+            -c:v libx264 -preset medium -crf ${{ inputs.crf }} -pix_fmt yuv420p -profile:v high -level 4.1 \
+            -color_primaries bt709 -color_trc bt709 -colorspace bt709 \
+            -c:a copy -movflags +faststart -shortest sears.mp4
+          ls -l sears.mp4 | tee -a "$GITHUB_STEP_SUMMARY"
+          ffprobe -v error -count_packets -select_streams v -show_entries stream=nb_read_packets -show_entries format=duration -of compact sears.mp4 | tee -a "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sears
+          path: sears.mp4
+          retention-days: 7

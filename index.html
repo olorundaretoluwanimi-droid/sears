@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>What Happened to Sears?</title>
+<style>
+@font-face{font-family:Fell;src:url(fonts/fell.woff2) format('woff2')}
+@font-face{font-family:Fell;src:url(fonts/fell_i.woff2) format('woff2');font-style:italic}
+@font-face{font-family:FellSC;src:url(fonts/fellsc.woff2) format('woff2')}
+@font-face{font-family:OST;src:url(fonts/ost400.woff2) format('woff2');font-weight:400}
+@font-face{font-family:OST;src:url(fonts/ost700.woff2) format('woff2');font-weight:700}
+@font-face{font-family:Serif;src:url(fonts/serif400.woff2) format('woff2');font-weight:400}
+@font-face{font-family:Serif;src:url(fonts/serif600.woff2) format('woff2');font-weight:600}
+@font-face{font-family:Serif;src:url(fonts/serifi.woff2) format('woff2');font-style:italic}
+@font-face{font-family:Sans;src:url(fonts/sans400.woff2) format('woff2');font-weight:400}
+@font-face{font-family:Sans;src:url(fonts/sans600.woff2) format('woff2');font-weight:600}
+@font-face{font-family:Mono;src:url(fonts/mono500.woff2) format('woff2')}
+@font-face{font-family:Hand;src:url(fonts/hand.woff2) format('woff2')}
+html,body{margin:0;background:#15110D;overflow:hidden}canvas{display:block}
+</style></head><body><canvas id="c" width="1920" height="1080"></canvas>
+<script>
+// "What Happened to Sears?" — the catalog comes alive. A different grammar from the earlier episodes: an aged catalog page as the
+// ground (darkening to the desk as Sears declines), one moving camera per chapter over a laid-out spread, order blanks that fill
+// themselves, page curls between chapters, cut-outs, type that drops in like set metal, red price stamps, a schematic rail map
+// with parcels, a house assembled from numbered lumber, counts as dots. render(t) is deterministic; all timing lives in film.json.
+const W = 1920, H = 1080, cv = document.getElementById('c'), x = cv.getContext('2d');
+const C = { paper:'#E4D5B1', paper2:'#D8C59A', mount:'#F1E6CC', ink:'#2A2018', ink2:'#5A4A38', red:'#B8322A', desk:'#15110D', desk2:'#221B14',
+            pen:'#1F2A44', cream:'#F1E7D3', dim:'#AE9F86', wood:'#C9A46A', wood2:'#9C7744' };
+let FILM = { scenes: [], subs: [], dur: 10 }, MAP = null, SIZES = {}, PAPER, DESK, SPECK, GRAIN = [];
+const IM = {};
+const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v)), seg = (t, a, b) => clamp((t - a) / (b - a)), lerp = (a, b, k) => a + (b - a) * k;
+const eo = k => 1 - Math.pow(1 - k, 3), eio = k => k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
+const eback = k => { const c = 1.6; return 1 + (c + 1) * Math.pow(k - 1, 3) + c * Math.pow(k - 1, 2); };
+function rnd(s) { return () => { s |= 0; s = s + 0x6D2B79F5 | 0; let t = Math.imul(s ^ s >>> 15, 1 | s); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+function load(src) { return new Promise(r => { const i = new Image(); i.onload = () => r(i); i.onerror = () => { console.warn('missing', src); r(null); }; i.src = src; }); }
+const AT = (s, v) => v == null ? s.t0 + .4 : v < 0 ? s.t0 + (-v) * (s.vd || (s.t1 - s.t0)) : s.t0 + v;   // seconds after t0, or (negative) a fraction of the line
+
+// ── textures ──────────────────────────────────────────────────────────────────────────────────────────────
+function mk(w, h) { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; }
+function makePaper() {
+  const c = mk(2048, 1152), g = c.getContext('2d'), R = rnd(7);
+  g.fillStyle = C.paper; g.fillRect(0, 0, 2048, 1152);
+  const d = g.getImageData(0, 0, 2048, 1152), a = d.data;
+  for (let i = 0; i < a.length; i += 4) { const n = (R() + R() + R() - 1.5) * 9; a[i] += n; a[i + 1] += n; a[i + 2] += n * .8; }
+  g.putImageData(d, 0, 0);
+  for (let i = 0; i < 1400; i++) {   // fibres
+    const X = R() * 2048, Y = R() * 1152, l = 6 + R() * 26, an = R() * 6.28; g.strokeStyle = `rgba(${R() < .5 ? '120,95,60' : '255,250,235'},${.05 + R() * .08})`;
+    g.lineWidth = .6 + R() * .7; g.beginPath(); g.moveTo(X, Y); g.quadraticCurveTo(X + Math.cos(an + 1) * l * .5, Y + Math.sin(an + 1) * l * .5, X + Math.cos(an) * l, Y + Math.sin(an) * l); g.stroke(); }
+  for (let i = 0; i < 46; i++) {     // foxing
+    const X = R() * 2048, Y = R() * 1152, r = 4 + R() * 30, gr = g.createRadialGradient(X, Y, 0, X, Y, r);
+    gr.addColorStop(0, `rgba(150,100,45,${.05 + R() * .12})`); gr.addColorStop(1, 'rgba(150,100,45,0)'); g.fillStyle = gr; g.fillRect(X - r, Y - r, 2 * r, 2 * r); }
+  const v = g.createRadialGradient(1024, 576, 300, 1024, 576, 1250); v.addColorStop(0, 'rgba(90,60,25,0)'); v.addColorStop(1, 'rgba(90,60,25,.32)');
+  g.fillStyle = v; g.fillRect(0, 0, 2048, 1152); return c;
+}
+function makeDesk() {
+  const c = mk(2048, 1152), g = c.getContext('2d'), R = rnd(11);
+  g.fillStyle = C.desk; g.fillRect(0, 0, 2048, 1152);
+  for (let i = 0; i < 260; i++) { const Y = R() * 1152; g.strokeStyle = `rgba(${R() < .5 ? '60,44,30' : '8,6,4'},${.25 + R() * .3})`; g.lineWidth = 1 + R() * 3;
+    g.beginPath(); g.moveTo(0, Y); for (let X = 0; X <= 2048; X += 128) g.lineTo(X, Y + Math.sin(X * .004 + i) * (4 + R() * 6)); g.stroke(); }
+  const v = g.createRadialGradient(1024, 520, 200, 1024, 576, 1200); v.addColorStop(0, 'rgba(70,48,26,.22)'); v.addColorStop(1, 'rgba(0,0,0,.55)');
+  g.fillStyle = v; g.fillRect(0, 0, 2048, 1152); return c;
+}
+function makeSpeck() { const c = mk(512, 512), g = c.getContext('2d'), R = rnd(23); for (let i = 0; i < 2600; i++) { g.fillStyle = `rgba(0,0,0,${R() * .9})`; g.beginPath(); g.arc(R() * 512, R() * 512, R() * 2.2, 0, 7); g.fill(); } return c; }
+function makeGrain() { for (let k = 0; k < 6; k++) { const c = mk(256, 256), g = c.getContext('2d'), d = g.createImageData(256, 256), R = rnd(100 + k);
+  for (let i = 0; i < d.data.length; i += 4) { const n = 128 + (R() + R() + R() + R() - 2) * 70; d.data[i] = d.data[i + 1] = d.data[i + 2] = n; d.data[i + 3] = 255; } g.putImageData(d, 0, 0); GRAIN.push(g.createPattern(c, 'repeat')); } }
+
+// ── drawing primitives ────────────────────────────────────────────────────────────────────────────────────
+const F = { fell: 'Fell', sc: 'FellSC', ost: 'OST', serif: 'Serif', sans: 'Sans', mono: 'Mono', hand: 'Hand' };
+function txt(s, X, Y, o = {}) {
+  x.save(); x.globalAlpha *= o.a ?? 1; x.font = `${o.it ? 'italic ' : ''}${o.w || 400} ${o.s || 30}px ${o.f || F.serif}`; x.fillStyle = o.c || C.ink;
+  x.textAlign = o.al || 'left'; x.textBaseline = o.bl || 'alphabetic'; if (o.ls) x.letterSpacing = o.ls + 'px';
+  if (o.sh) { x.shadowColor = o.sh; x.shadowBlur = o.sb ?? 10; }
+  x.fillText(s, X, Y); const m = x.measureText(s).width; x.restore(); if (o.id && REC) REC.push({ id: o.id, text: s, x0: X, y0: Y - (o.s || 30), x1: X + m, y1: Y }); return m;
+}
+function measure(s, o) { x.save(); x.font = `${o.it ? 'italic ' : ''}${o.w || 400} ${o.s || 30}px ${o.f || F.serif}`; if (o.ls) x.letterSpacing = o.ls + 'px'; const m = x.measureText(s).width; x.restore(); return m; }
+function rr(X, Y, w, h, r) { x.beginPath(); x.moveTo(X + r, Y); x.arcTo(X + w, Y, X + w, Y + h, r); x.arcTo(X + w, Y + h, X, Y + h, r); x.arcTo(X, Y + h, X, Y, r); x.arcTo(X, Y, X + w, Y, r); x.closePath(); }
+function hair(a, b, c, d, col = C.ink, lw = 1.5) { x.strokeStyle = col; x.lineWidth = lw; x.beginPath(); x.moveTo(a, b); x.lineTo(c, d); x.stroke(); }
+function grain(X, Y, w, h, a = .16, t = 0) { x.save(); x.globalCompositeOperation = 'overlay'; x.globalAlpha = a; x.fillStyle = GRAIN[Math.floor(t * 24) % 6]; x.fillRect(X, Y, w, h); x.restore(); }
+// draw an image to cover (X,Y,w,h); fx,fy = focus; z = extra zoom; grade: 'sepia' | 'colour' | 'paper' | 'none'
+function cover(img, X, Y, w, h, o = {}) {
+  if (!img) { x.fillStyle = '#6b5a45'; x.fillRect(X, Y, w, h); return; }
+  const z = o.z || 1, s = Math.max(w / img.width, h / img.height) * z, sw = w / s, sh = h / s;
+  const sx = clamp((img.width - sw) * (o.fx ?? .5), 0, img.width - sw), sy = clamp((img.height - sh) * (o.fy ?? .5), 0, img.height - sh);
+  x.save(); x.filter = GR[o.grade || 'sepia']; x.drawImage(img, sx, sy, sw, sh, X, Y, w, h); x.restore();
+  if ((o.grade || 'sepia') !== 'none') grain(X, Y, w, h, o.grade === 'paper' ? .07 : .16, o.t || 0);
+}
+const GR = { sepia: 'grayscale(1) sepia(.5) contrast(1.12) brightness(.96)', colour: 'saturate(.82) contrast(1.04) brightness(.97) sepia(.08)',
+             paper: 'sepia(.25) contrast(1.06) brightness(.97)', none: 'none' };
+// a photo laid on the page: plate (mount + hairline + shadow) or cartouche (rounded, double rule, caption pill)
+function plate(img, X, Y, w, h, o = {}) {
+  x.save(); x.translate(X + w / 2, Y + h / 2); x.rotate((o.rot || 0) * Math.PI / 180); x.globalAlpha *= o.a ?? 1;
+  const m = o.m ?? 16, dark = o.dark;
+  x.save(); x.shadowColor = 'rgba(30,18,6,.45)'; x.shadowBlur = 28; x.shadowOffsetY = 10; x.fillStyle = dark ? '#1d1712' : C.mount;
+  if (o.cart) rr(-w / 2 - m, -h / 2 - m, w + 2 * m, h + 2 * m, 30); else x.beginPath(), x.rect(-w / 2 - m, -h / 2 - m, w + 2 * m, h + 2 * m); x.fill(); x.restore();
+  x.save(); if (o.cart) { rr(-w / 2, -h / 2, w, h, 22); x.clip(); } cover(img, -w / 2, -h / 2, w, h, o); x.restore();
+  x.strokeStyle = dark ? '#5a4a38' : C.ink; x.lineWidth = 2;
+  if (o.cart) { rr(-w / 2, -h / 2, w, h, 22); x.stroke(); x.lineWidth = 1; rr(-w / 2 - 7, -h / 2 - 7, w + 14, h + 14, 27); x.stroke(); } else x.strokeRect(-w / 2, -h / 2, w, h);
+  if (o.cap) capPill(o.cap, o.capAt === 'l' ? -w / 2 + 30 : w / 2 - 30, h / 2 - 6, o.capAt === 'l' ? 'l' : 'r', dark, o.capA ?? 1);
+  x.restore();
+}
+function capPill(s, X, Y, side, dark, a = 1) {   // rounded caption box sitting on the frame edge, like the 1921 catalog
+  const lines = s.split('\n'), fs = 27, wd = Math.max(...lines.map(l => measure(l, { s: fs, f: F.fell }))) + 48, ht = lines.length * 34 + 22;
+  const L = side === 'l' ? X : X - wd; x.save(); x.globalAlpha *= a; x.fillStyle = dark ? '#2a221a' : C.mount; rr(L, Y - ht / 2, wd, ht, 14); x.fill();
+  x.strokeStyle = dark ? '#7a6650' : C.ink; x.lineWidth = 1.6; x.stroke(); rr(L + 5, Y - ht / 2 + 5, wd - 10, ht - 10, 10); x.lineWidth = .8; x.stroke();
+  lines.forEach((l, i) => txt(l, L + wd / 2, Y - ht / 2 + 38 + i * 34, { s: fs, f: F.fell, al: 'center', c: dark ? C.cream : C.ink }));
+  x.restore();
+}
+function cut(img, X, Y, w, o = {}) {   // a transparent cut-out with a soft shadow, rotated about its centre
+  if (!img) return; const h = w * img.height / img.width; x.save(); x.translate(X, Y); x.rotate((o.rot || 0) * Math.PI / 180); x.globalAlpha *= o.a ?? 1;
+  if (o.sh !== false) { x.shadowColor = 'rgba(40,25,10,.35)'; x.shadowBlur = o.blur ?? 14; x.shadowOffsetY = o.lift ?? 8; }
+  x.filter = o.grade ? GR[o.grade] : 'none'; x.drawImage(img, -w / 2, -h / 2, w, h); x.restore();
+}
+// type that drops in letter by letter like set metal type (ease-back, small squash)
+function drop(s, X, Y, t, t0, o = {}) {
+  const fs = o.s || 90, al = o.al || 'left', st = o.st ?? .035, wd = measure(s, o); let cx = al === 'center' ? X - wd / 2 : al === 'right' ? X - wd : X;
+  x.save(); x.font = `${o.it ? 'italic ' : ''}${o.w || 400} ${fs}px ${o.f || F.fell}`; if (o.ls) x.letterSpacing = o.ls + 'px'; x.fillStyle = o.c || C.ink; x.textBaseline = 'alphabetic';
+  for (let i = 0; i < s.length; i++) {
+    const ch = s[i], cw = x.measureText(ch).width + (o.ls || 0), k = seg(t, t0 + i * st, t0 + i * st + .28);
+    if (k > 0) { const e = eback(k); x.save(); x.globalAlpha *= clamp(k * 3); x.translate(cx + cw / 2, Y - fs * .6 * (1 - e)); x.scale(1 + (1 - k) * .06, 1 - (1 - k) * .05); x.fillText(ch, -cw / 2 + (o.ls || 0) / 2, 0); x.restore(); }
+    cx += cw;
+  }
+  x.restore(); if (o.id && REC && seg(t, t0 + s.length * st, t0 + s.length * st + .3) >= 1) REC.push({ id: o.id, text: s, x0: X - (al === 'center' ? wd / 2 : 0), y0: Y - fs, x1: X + wd, y1: Y });
+  return wd;
+}
+// a red rubber-stamp price/date: lands from 1.5× in 0.14 s, slightly rotated, ink broken by a speckle mask
+function stamp(s, X, Y, t, t0, o = {}) {
+  const k = seg(t, t0, t0 + .14); if (k <= 0) return; const fs = o.s || 96, sc = lerp(1.55, 1, eo(k)), wd = measure(s, { s: fs, f: o.f || F.ost, w: 700 });
+  const c = mk(Math.ceil(wd + 60), Math.ceil(fs * 1.5)), g = c.getContext('2d');
+  g.font = `700 ${fs}px ${o.f || F.ost}`; g.fillStyle = o.c || C.red; g.textBaseline = 'middle'; g.fillText(s, 30, c.height / 2 + fs * .04);
+  if (o.box !== false) { g.strokeStyle = o.c || C.red; g.lineWidth = fs * .06; g.strokeRect(10, 6, c.width - 20, c.height - 12); }
+  g.globalCompositeOperation = 'destination-out'; g.globalAlpha = .55; g.drawImage(SPECK, (o.seed || 0) * 37 % 200, 0, c.width, c.height, 0, 0, c.width, c.height);
+  x.save(); x.translate(X, Y); x.rotate((o.rot ?? -5) * Math.PI / 180); x.scale(sc, sc); x.globalAlpha *= k * (o.a ?? .92); x.globalCompositeOperation = o.dark ? 'source-over' : 'multiply';
+  x.drawImage(c, -c.width / 2, -c.height / 2); x.restore();
+  if (o.id && REC) REC.push({ id: o.id, text: s, x0: X - wd / 2, y0: Y - fs / 2, x1: X + wd / 2, y1: Y + fs / 2 });
+}
+// handwriting revealed left to right with the pen tip; returns the tip position
+function hand(s, X, Y, t, t0, dur, o = {}) {
+  const fs = o.s || 54, wd = measure(s, { s: fs, f: F.hand }), k = seg(t, t0, t0 + dur); if (k <= 0) return;
+  x.save(); x.beginPath(); x.rect(X - 10, Y - fs * 1.3, (wd + 20) * k, fs * 1.9); x.clip(); txt(s, X, Y, { s: fs, f: F.hand, c: o.c || C.pen }); x.restore();
+  if (k < 1) { x.save(); x.fillStyle = C.pen; x.beginPath(); x.arc(X + wd * k, Y - fs * .25 + Math.sin(k * 60) * fs * .18, 3.2, 0, 7); x.fill(); x.restore(); }
+  if (o.id && REC && k >= 1) REC.push({ id: o.id, text: s, x0: X, y0: Y - fs, x1: X + wd, y1: Y });
+}
+function counter(v, d = 0) { return v.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d }); }
+
+// ── grounds and camera ────────────────────────────────────────────────────────────────────────────────────
+// paper ground with the catalog's ornamental double rule; dk 0..1 darkens it toward the desk (the decline)
+function ground(dk = 0, o = {}) {
+  x.drawImage(PAPER, 0, 0, 2048, 1152, -64, -36, 2048, 1152);
+  if (dk > 0) { x.save(); x.globalAlpha = dk; x.drawImage(DESK, 0, 0, 2048, 1152, -64, -36, 2048, 1152); x.restore(); }
+  if (o.border !== false && dk < 1) { x.save(); x.globalAlpha = 1 - dk; x.strokeStyle = C.ink; x.lineWidth = 3; x.strokeRect(28, 26, W - 56, H - 52); x.lineWidth = 1; x.strokeRect(38, 36, W - 76, H - 72);
+    for (let i = 0; i < 46; i++) { x.fillStyle = C.ink; x.fillRect(48 + i * 40, 30, 22, 3); x.fillRect(48 + i * 40, H - 33, 22, 3); } x.restore(); }
+}
+// camera keys: [[time (s after t0), x, y, zoom, roll°], ...], eased between keys; returns a transform applied around the screen centre
+function camAt(s, t) {
+  const K = s.cam || [[0, W / 2, H / 2, 1, 0]], l = t - s.t0; let i = 0; while (i < K.length - 1 && K[i + 1][0] <= l) i++;
+  const a = K[i], b = K[Math.min(i + 1, K.length - 1)], k = b === a ? 0 : eio(seg(l, a[0], b[0]));
+  return { x: lerp(a[1], b[1], k), y: lerp(a[2], b[2], k), z: lerp(a[3], b[3], k), r: lerp(a[4] || 0, b[4] || 0, k) };
+}
+function withCam(c, fn) { x.save(); x.translate(W / 2, H / 2); x.rotate(c.r * Math.PI / 180); x.scale(c.z, c.z); x.translate(-c.x, -c.y); fn(); x.restore(); }
+
+// ── the map (Natural Earth, schematic) ────────────────────────────────────────────────────────────────────
+function mapDraw(X, Y, w, o = {}) {
+  if (!MAP) return; const s = w / MAP.W, dark = o.dark, P = (p) => [X + p[0] * s, Y + p[1] * s];
+  x.save(); x.beginPath(); x.rect(X, Y, w, MAP.H * s); x.clip();
+  x.fillStyle = dark ? '#2a231b' : 'rgba(205,184,140,.55)'; x.strokeStyle = dark ? '#7a6650' : C.ink2; x.lineWidth = 1.2;
+  for (const r of MAP.land) { x.beginPath(); r.forEach((p, i) => { const [a, b] = P(p); i ? x.lineTo(a, b) : x.moveTo(a, b); }); x.closePath(); x.fill(); x.stroke(); }
+  x.fillStyle = dark ? '#18130e' : 'rgba(236,226,200,.9)';
+  for (const r of MAP.lakes) { x.beginPath(); r.forEach((p, i) => { const [a, b] = P(p); i ? x.lineTo(a, b) : x.moveTo(a, b); }); x.closePath(); x.fill(); x.stroke(); }
+  if (o.rails !== false) { x.strokeStyle = dark ? 'rgba(170,140,105,.28)' : 'rgba(42,32,24,.34)'; x.lineWidth = .8;
+    for (const r of MAP.rail) { x.beginPath(); r.forEach((p, i) => { const [a, b] = P(p); i ? x.lineTo(a, b) : x.moveTo(a, b); }); x.stroke(); } }
+  x.restore(); return { s, P: (name) => P(MAP.towns[name]), H: MAP.H * s };
+}
+// a route from A to B as a gentle arc; k 0..1 drawn; a parcel rides the head
+function route(A, B, k, o = {}) {
+  if (k <= 0) return; const mx = (A[0] + B[0]) / 2, my = (A[1] + B[1]) / 2, dx = B[0] - A[0], dy = B[1] - A[1], bend = o.bend ?? .22;
+  const cx = mx - dy * bend, cy = my + dx * bend, Q = u => [(1 - u) * (1 - u) * A[0] + 2 * (1 - u) * u * cx + u * u * B[0], (1 - u) * (1 - u) * A[1] + 2 * (1 - u) * u * cy + u * u * B[1]];
+  x.save(); x.strokeStyle = o.c || C.red; x.lineWidth = o.lw || 3; x.setLineDash(o.dash || [10, 7]); x.beginPath();
+  for (let u = 0; u <= k + 1e-6; u += .02) { const [a, b] = Q(Math.min(u, k)); u ? x.lineTo(a, b) : x.moveTo(a, b); } x.stroke(); x.setLineDash([]);
+  if (o.parcel !== false && k < 1) { const [a, b] = Q(k); parcel(a, b, o.ps || 16); }
+  x.restore();
+}
+function parcel(X, Y, r) { x.save(); x.translate(X, Y); x.rotate(-.12); x.fillStyle = '#B48A55'; x.strokeStyle = C.ink; x.lineWidth = 1.5; x.fillRect(-r, -r * .7, 2 * r, 1.4 * r); x.strokeRect(-r, -r * .7, 2 * r, 1.4 * r);
+  x.strokeStyle = '#6b3a1e'; x.beginPath(); x.moveTo(0, -r * .7); x.lineTo(0, r * .7); x.moveTo(-r, 0); x.lineTo(r, 0); x.stroke(); x.restore(); }
+function town(p, name, o = {}) { x.save(); x.globalAlpha *= o.a ?? 1; x.fillStyle = o.c || C.red; x.beginPath(); x.arc(p[0], p[1], o.r || 8, 0, 7); x.fill();
+  x.strokeStyle = o.dark ? C.cream : C.ink; x.lineWidth = 1.5; x.stroke(); txt(name, p[0] + (o.dx ?? 16), p[1] + (o.dy ?? 9), { s: o.s || 30, f: F.fell, c: o.dark ? C.cream : C.ink, al: o.al || 'left', id: o.id }); x.restore(); }
+
+// ── captions ──────────────────────────────────────────────────────────────────────────────────────────────
+function subs(t) {
+  const s = FILM.subs.find(q => t >= q.t0 && t < q.t1); if (!s) return; const a = Math.min(seg(t, s.t0, s.t0 + .12), 1 - seg(t, s.t1 - .1, s.t1));
+  const wd = measure(s.text, { s: 47, f: F.sans, w: 600 }); x.save(); x.globalAlpha = a; x.fillStyle = 'rgba(21,17,13,.80)'; rr(W / 2 - wd / 2 - 30, 952, wd + 60, 72, 12); x.fill();
+  txt(s.text, W / 2, 1004, { s: 47, f: F.sans, w: 600, c: C.cream, al: 'center' }); x.restore();
+}
+function srcTag(s, X, Y, dark) { txt(s, X, Y, { s: 18, f: F.mono, c: dark ? C.dim : C.ink2, ls: 1 }); }
+
+// ── page curl between two scenes (the chapter turn) ──────────────────────────────────────────────────────
+function curl(p, drawTop, drawUnder) {
+  drawUnder(); if (p >= 1) return; if (p <= 0) { drawTop(); return; }
+  const d = [-.88, -.48], L = 2600, s = eio(p) * L, O = [W + 60, H + 60], n = [d[0], d[1]], P0 = [O[0] + n[0] * s, O[1] + n[1] * s];
+  const side = q => (q[0] - P0[0]) * n[0] + (q[1] - P0[1]) * n[1];   // > 0: still on the page, < 0: lifted
+  const rect = [[0, 0], [W, 0], [W, H], [0, H]];
+  const clipPoly = (poly, keep) => { const out = []; for (let i = 0; i < poly.length; i++) { const A = poly[i], B = poly[(i + 1) % poly.length], sa = side(A) * keep, sb = side(B) * keep;
+      if (sa >= 0) out.push(A); if (sa * sb < 0) { const u = sa / (sa - sb); out.push([A[0] + (B[0] - A[0]) * u, A[1] + (B[1] - A[1]) * u]); } } return out; };
+  const top = clipPoly(rect, 1), lifted = clipPoly(rect, -1), refl = q => { const k = 2 * side(q); return [q[0] - k * n[0], q[1] - k * n[1]]; };
+  const path = poly => { x.beginPath(); poly.forEach((q, i) => i ? x.lineTo(q[0], q[1]) : x.moveTo(q[0], q[1])); x.closePath(); };
+  if (top.length > 2) { x.save(); path(top); x.clip(); drawTop(); x.restore(); }
+  if (lifted.length > 2) { const flap = lifted.map(refl);
+    x.save(); x.shadowColor = 'rgba(20,12,4,.5)'; x.shadowBlur = 40; x.shadowOffsetX = -14; x.shadowOffsetY = -6; path(flap); x.fillStyle = C.paper2; x.fill(); x.restore();
+    x.save(); path(flap); x.clip(); x.drawImage(PAPER, 300, 200, 900, 500, 0, 0, W, H); const g = x.createLinearGradient(P0[0], P0[1], P0[0] - n[0] * 260, P0[1] - n[1] * 260);
+    g.addColorStop(0, 'rgba(60,40,15,.45)'); g.addColorStop(.35, 'rgba(255,245,220,.18)'); g.addColorStop(1, 'rgba(60,40,15,.1)'); x.fillStyle = g; x.fillRect(0, 0, W, H); x.restore(); }
+}
+
+// ── scenes ────────────────────────────────────────────────────────────────────────────────────────────────
+// order blank: the chapter card. s: {no, art, year, price, img, imgCut, sub, dk}
+function sBlank(t, s) {
+  const dk = s.dk || 0, c = camAt(s, t); ground(dk);
+  withCam(c, () => {
+    if (s.side) plate(IM[s.side], 1290, 170, 520, 640, { rot: 3, cart: 1, grade: s.sideGrade, dark: dk > .5, t });
+    if (s.cutImg) cut(IM[s.cutImg], s.cutX || 1520, s.cutY || 500, s.cutW || 420, { rot: lerp(-8, -3, seg(t, s.t0, s.t1)), grade: 'paper' });
+    const X = 150, Y = 210, w = 1080, h = 560; x.save(); x.translate(X + w / 2, Y + h / 2); x.rotate(-1.2 * Math.PI / 180); x.translate(-w / 2, -h / 2);
+    x.save(); x.shadowColor = 'rgba(30,18,6,.45)'; x.shadowBlur = 30; x.shadowOffsetY = 12; x.fillStyle = '#EFE3C4'; x.fillRect(0, 0, w, h); x.restore();
+    x.drawImage(PAPER, 400, 300, w, h, 0, 0, w, h); x.globalAlpha = .9; x.strokeStyle = C.ink; x.lineWidth = 2.5; x.strokeRect(18, 18, w - 36, h - 36); x.lineWidth = 1; x.strokeRect(26, 26, w - 52, h - 52); x.globalAlpha = 1;
+    txt('SEARS, ROEBUCK & CO.', w / 2, 92, { s: 52, f: F.sc, al: 'center', ls: 4 });
+    txt('ORDER BLANK  ·  CHICAGO, ILL.', w / 2, 132, { s: 22, f: F.mono, al: 'center', c: C.ink2, ls: 3 });
+    const cols = [[60, 'Catalogue No.'], [290, 'Name of Article'], [650, 'Year'], [800, 'Price']];
+    hair(50, 170, w - 50, 170, C.ink, 1.5); hair(50, 214, w - 50, 214, C.ink, 1); cols.forEach(([cx, l]) => txt(l, cx, 202, { s: 24, f: F.fell, it: 1, c: C.ink2 }));
+    [270, 630, 780].forEach(cx => hair(cx, 170, cx, 400, C.ink, 1)); for (let i = 0; i < 3; i++) hair(50, 300 + i * 50, w - 50, 300 + i * 50, 'rgba(42,32,24,.35)', 1);
+    const a = s.t0 + .5; hand(s.no, 70, 285, t, a, .5, { s: 60 }); hand(s.art, 300, 285, t, a + .55, .9, { s: 60, id: 'oa' }); hand(s.year, 650, 285, t, a + 1.55, .45, { s: 60, id: 'oy' });
+    stamp(s.price, 910, 268, t, a + 2.15, { s: Math.min(62, 62 * 200 / measure(s.price, { s: 62, f: F.ost, w: 700 })), rot: -6, seed: 3, id: 'op' });
+    if (s.sub) txt(s.sub, w / 2, 470, { s: 34, f: F.fell, it: 1, al: 'center', a: seg(t, a + 2.5, a + 2.8), id: 'os' });
+    txt(`${s.of || ''}`, w - 70, h - 50, { s: 22, f: F.mono, al: 'right', c: C.ink2, a: seg(t, a + 2.5, a + 2.8) });
+    x.restore();
+  });
+}
+// the signature shot: rail map Chicago → Carlinville, boxcar, numbered lumber assembling the Carlin, plan drawing itself, ruler-wipe to 1921
+function sHouse(t, s) {
+  ground(0); const l = t - s.t0, c = camAt(s, t);
+  withCam(c, () => {
+    const m = mapDraw(1180, 120, 640, {}); if (m) { x.save(); x.strokeStyle = C.ink; x.lineWidth = 2; x.strokeRect(1180, 120, 640, m.H); x.restore();
+      const A = m.P('Chicago'), B = m.P('Carlinville'); town(A, 'Chicago', { c: C.ink, r: 7, s: 26 }); route(A, B, seg(l, .3, 3.2), { bend: -.25, lw: 3.5, ps: 13 });
+      town(B, 'Carlinville', { r: 9, s: 30, a: seg(l, 3.0, 3.3), dx: -16, al: 'right', id: 'tc' }); srcTag('MAP · SCHEMATIC · NATURAL EARTH', 1180, 110 + 0); }
+    const EX = 120, EY = 120, EW = 980, EH = EW * 1284 / 2172; const img = IM.carlin_elev;
+    x.save(); x.shadowColor = 'rgba(30,18,6,.4)'; x.shadowBlur = 26; x.shadowOffsetY = 10; x.fillStyle = C.mount; x.fillRect(EX - 16, EY - 16, EW + 32, EH + 32); x.restore();
+    // the drawing is revealed board by board where each piece of lumber lands
+    const R = rnd(5), N = 42, cols = 7, rows = 6, cw = EW / cols, ch = EH / rows;
+    for (let i = 0; i < N; i++) { const cx = i % cols, cy = rows - 1 - Math.floor(i / cols), land = 1.2 + i * .09 + R() * .25, k = seg(l, land, land + .55);
+      const tx = EX + cx * cw, ty = EY + cy * ch;
+      if (k >= 1) { x.save(); x.beginPath(); x.rect(tx - .5, ty - .5, cw + 1, ch + 1); x.clip(); cover(img, EX, EY, EW, EH, { grade: 'sepia', t }); x.restore(); }
+      else if (k > 0) { const sx = 1250 + R() * 300, sy = 900 + R() * 60, e = eio(k), px = lerp(sx, tx + cw / 2, e), py = lerp(sy, ty + ch / 2, e) - Math.sin(e * Math.PI) * 220;
+        x.save(); x.translate(px, py); x.rotate((1 - e) * (R() * 3 - 1.5)); x.fillStyle = C.wood; x.strokeStyle = C.wood2; x.lineWidth = 1.5; x.fillRect(-cw * .48, -10, cw * .96, 20); x.strokeRect(-cw * .48, -10, cw * .96, 20);
+        txt(String(100 + i * 7), 0, 7, { s: 16, f: F.mono, al: 'center', c: '#5b3a1a' }); x.restore(); } else R(), R(), R(); }
+    x.strokeStyle = C.ink; x.lineWidth = 2; x.strokeRect(EX, EY, EW, EH);
+    // boxcar at the bottom right, doors open
+    x.save(); x.translate(1250, 860); x.fillStyle = '#6b3a24'; x.fillRect(0, 0, 560, 120); x.strokeStyle = C.ink; x.lineWidth = 2; x.strokeRect(0, 0, 560, 120);
+    x.fillStyle = '#2b1a10'; x.fillRect(220, 14, 120, 106); txt('SEARS, ROEBUCK & CO.', 110, 70, { s: 22, f: F.sc, c: C.cream, al: 'center' }); txt('READY-CUT', 450, 70, { s: 22, f: F.sc, c: C.cream, al: 'center' });
+    x.fillStyle = C.ink; [70, 490].forEach(w => { x.beginPath(); x.arc(w, 124, 16, 0, 7); x.fill(); }); x.restore();
+    if (IM.carlin_plan1) { const k = seg(l, 5.4, 7.2); x.save(); x.beginPath(); x.rect(EX, EY + EH + 40, 300 * k, 330); x.clip(); x.drawImage(IM.carlin_plan1, EX, EY + EH + 40, 300, 323); x.restore(); }
+    if (IM.carlin_title) cut(IM.carlin_title, EX + 680, EY + EH + 90, 560, { sh: false, a: seg(l, 6.6, 7.0) });
+    drop('30,000 pieces', EX + 420, EY + EH + 200, t, s.t0 + 7.2, { s: 64, f: F.fell, id: 'hp' });
+    // the ruler-wipe: the catalog drawing becomes Carlinville's real street, 1921
+    const wk = eio(seg(l, s.wipe || 8.2, (s.wipe || 8.2) + 1.6));
+    if (wk > 0) { const XW = EX + EW * wk; x.save(); x.beginPath(); x.rect(EX, EY, EW * wk, EH); x.clip(); cover(IM.carl1921_street2, EX, EY, EW, EH, { grade: 'sepia', t, fy: .6 }); x.restore();
+      x.save(); x.fillStyle = '#d9c08a'; x.fillRect(XW - 9, EY - 30, 18, EH + 60); x.strokeStyle = C.ink; x.lineWidth = 1.5; x.strokeRect(XW - 9, EY - 30, 18, EH + 60);
+      for (let i = 0; i < 24; i++) hair(XW - 9, EY - 20 + i * (EH + 40) / 24, XW - (i % 4 ? 2 : -3), EY - 20 + i * (EH + 40) / 24, C.ink, 1); x.restore();
+      if (wk > .98) capPill('Street view of Sears, Roebuck and Co.\nhouses at Carlinville, Ill. · 1921', EX + EW - 30, EY + EH - 6, 'r', false, seg(l, (s.wipe || 8.2) + 1.6, (s.wipe || 8.2) + 1.9)); }
+  });
+}
+// the count of stores as dots going dark, beside a photo, on the dark desk
+function sDots(t, s) {
+  ground(1, { border: false }); const l = t - s.t0;
+  plate(IM[s.img], 110, 110, 900, 676, { grade: 'colour', dark: 1, t, rot: -1.2 }); srcTag(s.tag, 96, 88, 1);
+  const N = s.from, cols = 70, sz = 10.4, X0 = 1140, Y0 = 170; const keys = s.keys; // [[time, lit]]
+  let i = 0; while (i < keys.length - 1 && keys[i + 1][0] <= l) i++; const a = keys[i], b = keys[Math.min(i + 1, keys.length - 1)];
+  const lit = Math.round(lerp(a[1], b[1], b === a ? 0 : eio(seg(l, a[0], b[0])))), R = rnd(9), order = [...Array(N).keys()];
+  for (let j = N - 1; j > 0; j--) { const r = Math.floor(R() * (j + 1)); [order[j], order[r]] = [order[r], order[j]]; }
+  const on = new Uint8Array(N); for (let j = 0; j < lit; j++) on[order[j]] = 1;
+  for (let j = 0; j < N; j++) { const X = X0 + (j % cols) * sz, Y = Y0 + Math.floor(j / cols) * sz; x.fillStyle = on[j] ? '#E8C27A' : '#2c241c'; x.fillRect(X, Y, sz - 3, sz - 3); }
+  const big = counter(lit); txt(big, 1140 + 360, 840, { s: 150, f: F.ost, w: 700, c: lit <= 9 ? C.red : C.cream, al: 'center', id: 'dn' });
+  txt(s.label, 1140 + 360, 892, { s: 30, f: F.fell, it: 1, c: C.dim, al: 'center', id: 'dl' });
+  txt(s.year(l), 1140, 140, { s: 34, f: F.ost, w: 700, c: C.red, id: 'dy' });
+}
+const SCN = { blank: sBlank };
+
+// ── frame ────────────────────────────────────────────────────────────────────────────────────────────────
+let REC = null;
+function drawScene(s, t) { (SCN[s.type] || (() => ground(0)))(t, s); }
+function render(t) {
+  x.setTransform(1, 0, 0, 1, 0, 0); x.globalAlpha = 1; x.filter = 'none'; x.fillStyle = C.desk; x.fillRect(0, 0, W, H);
+  const i = FILM.scenes.findIndex(s => t >= s.t0 && t < s.t1), s = FILM.scenes[i] || FILM.scenes[FILM.scenes.length - 1];
+  if (!s) return; const p = FILM.scenes[i - 1];
+  if (s.curl && p && t < s.t0 + .9) { const k = seg(t, s.t0, s.t0 + .9); curl(k, () => drawScene(p, t), () => drawScene(s, t)); }
+  else drawScene(s, t);
+  subs(t);
+}
+window.render = render;
+window.TEXTS = t => { REC = []; render(t); const r = REC; REC = null; return r; };
+(async () => {
+  await document.fonts.load('40px Fell'); await Promise.all(['FellSC', 'OST', 'Serif', 'Sans', 'Mono', 'Hand'].map(f => document.fonts.load(`40px ${f}`)));
+  await Promise.all(['700 40px OST', '600 40px Sans', 'italic 40px Fell'].map(f => document.fonts.load(f)));
+  try { FILM = await (await fetch('film.json')).json(); } catch (e) { console.warn('no film.json'); }
+  MAP = await (await fetch('assets/map.json')).json(); SIZES = await (await fetch('assets/sizes.json')).json();
+  PAPER = makePaper(); DESK = makeDesk(); SPECK = makeSpeck(); makeGrain();
+  const names = new Set(); JSON.stringify(FILM, (k, v) => { if (typeof v === 'string' && /^[a-z0-9_]+$/.test(v) && v.length > 2) names.add(v); return v; });
+  (window.ALWAYS || []).forEach(n => names.add(n));
+  const L = []; for (const n of names) { const png = /^(carlin_plan|carlin_title|sell_head|q192|cut_)/.test(n); if (!SIZES[n]) continue; L.push(load(`assets/${n}.${png ? 'png' : 'jpg'}`).then(im => { if (im) IM[n] = im; })); }
+  await Promise.all(L);
+  // scene helpers that are functions (not JSON)
+  window.DUR = FILM.dur; window.READY = true; render(0);
+})();
+</script><script src="scenes.js"></script></body></html>
